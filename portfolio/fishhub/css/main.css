@@ -1,0 +1,74 @@
+html, body
+{
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 25x;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.navbar
+{
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px)
+{
+.section-css
+    {
+        min-height: 100vh;
+        min-width: 18rem;
+    }
+}
+
+.header-img
+{
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/bg.jpg");
+    opacity: 0.85;
+} 
+
+.header-img {
+      height: 100vh;
+      min-height: 650px;
+      padding-top: 0;
+      padding-bottom: 0;
+}
+
+.onas
+{
+    min-height: 40vh;
+    padding-top: 10px;
+    background-color: #383838;
+}
+
+@media (min-height: 992px)
+{
+    .onas
+    {
+        min-height: 40vh;
+        padding-top: 10px;
+    }
+}
+
+.aboutus
+{
+    margin-top: 50px;
+}
+
+.about-text
+{
+    text-align: center;
+    font-size: 17px;
+}
+
+.zamow-img
+{
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/bg2.jpg");
+    opacity: 0.85;
+    filter: sepia(100%);
+} 
