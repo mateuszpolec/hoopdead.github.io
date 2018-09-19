@@ -11,6 +11,7 @@ html, body
 {
     letter-spacing: 1px;
     text-transform: uppercase;
+    padding: 20px;
 }
 
 @media (min-width: 768px)
@@ -44,7 +45,7 @@ html, body
     background-color: #383838;
 }
 
-@media (min-height: 992px)
+@media (min-width: 768px)
 {
     .mobile
     {
@@ -53,12 +54,21 @@ html, body
     }
 }
 
-@media (min-height: 992px)
+@media (min-width: 768px)
 {
     .mobile-full
     {
         min-height: 100vh;
         padding-top: 10px;
+    }
+}
+
+@media (min-width: 768px)
+{
+    #mainNav.navbar-shrink
+    {
+        border-bottom: 1px solid rgba(33, 37, 41, 0.1);
+        background-color: #000;
     }
 }
 
@@ -81,3 +91,4 @@ html, body
     opacity: 0.85;
     filter: sepia(100%);
 } 
+
