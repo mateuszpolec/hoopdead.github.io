@@ -46,7 +46,7 @@ html, body
 
 @media (min-height: 992px)
 {
-    .onas
+    .mobile
     {
         min-height: 40vh;
         padding-top: 10px;
