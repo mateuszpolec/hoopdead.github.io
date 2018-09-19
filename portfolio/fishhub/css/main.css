@@ -11,17 +11,15 @@ html, body
 {
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding: 20px;
+    padding: 15px;
+    opacity: 0.8;
 }
 
-@media (min-width: 768px)
-{
 .section-css
     {
         min-height: 100vh;
         min-width: 18rem;
     }
-}
 
 .header-img
 {
@@ -45,32 +43,41 @@ html, body
     background-color: #383838;
 }
 
-@media (min-width: 768px)
+@media (max-width: 768px)
 {
     .mobile
     {
         min-height: 40vh;
         padding-top: 10px;
     }
-}
-
-@media (min-width: 768px)
-{
     .mobile-full
     {
         min-height: 100vh;
         padding-top: 10px;
     }
+    #main.navbar-background
+    {
+        background-color: #000;
+        color: #fff;
+    }
+    .fa-bars
+    {
+        color: white;
+    }
 }
+
 
 @media (min-width: 768px)
 {
-    #mainNav.navbar-shrink
+    #main.navbar-background
     {
         border-bottom: 1px solid rgba(33, 37, 41, 0.1);
         background-color: #000;
+        color: #fff;
     }
+
 }
+
 
 .aboutus
 {
@@ -88,7 +95,22 @@ html, body
     background-position: center center;
     background-size: cover;
     background-image: url("../img/bg2.jpg");
-    opacity: 0.85;
-    filter: sepia(100%);
+    opacity: 0.8;
+    filter: sepia(60%);
 } 
 
+.order
+{
+    color: #fff;
+
+}
+
+.fa-truck
+{
+    font-size: 80px;
+}
+
+#map
+{
+    height: 25vh;
+}
