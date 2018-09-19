@@ -53,6 +53,15 @@ html, body
     }
 }
 
+@media (min-height: 992px)
+{
+    .mobile-full
+    {
+        min-height: 100vh;
+        padding-top: 10px;
+    }
+}
+
 .aboutus
 {
     margin-top: 50px;
