@@ -110,7 +110,31 @@ html, body
     font-size: 80px;
 }
 
-#map
+.menu
 {
-    height: 25vh;
+    background-position: center center;
+    background-size: cover;
+    background-image: url("../img/bg3.jpg");
+    opacity: 0.8;
+    background-color: #000;
+}
+
+.menu-header
+{
+    padding-top: 100px;
+}
+
+hr
+{
+    opacity: 0.6;
+    border-top: 1px solid #a59a9a;
+    margin: 0;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.opacity
+{
+    background-color: #141414;
+    opacity: 0.9;
 }

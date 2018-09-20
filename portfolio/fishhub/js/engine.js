@@ -7,7 +7,7 @@
   
     // Collapse Navbar
     var navbarCollapse = function() {
-      if ($("#main").offset().top > 100) {
+      if ($("#main").offset().top > 30) {
         $("#main").addClass("navbar-background");
       } else {
         $("#main").removeClass("navbar-background");
