@@ -3,8 +3,6 @@
 
   
 
-
-  
     // Collapse Navbar
     var navbarCollapse = function() {
       if ($("#main").offset().top > 30) {

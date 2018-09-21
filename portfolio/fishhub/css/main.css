@@ -40,7 +40,7 @@ html, body
 {
     min-height: 40vh;
     padding-top: 10px;
-    background-color: #383838;
+    background-color: #232323;
 }
 
 @media (max-width: 768px)
@@ -137,4 +137,10 @@ hr
 {
     background-color: #141414;
     opacity: 0.9;
+}
+
+.fa-phone-volume
+{
+    margin-top: 10px;
+    font-size: 45px;
 }
