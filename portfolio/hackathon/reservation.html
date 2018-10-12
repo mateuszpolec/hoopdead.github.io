@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Be Fit | Aqua Zdrój</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/reservation.css">
+
+    <link href='fullcalendar.min.css' rel='stylesheet' />
+    <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
+    <script src='lib/moment.min.js'></script>
+    <script src='lib/jquery.min.js'></script>
+    <script src='fullcalendar.min.js'></script>
+    <script src='locale-all.js'></script>
+
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <!-- Sidebar Holder -->
+        <nav id="sidebar">
+            <div class="sidebar-header text-center my-4">
+                <img src = "img/logo.png" width = "190" height = "125">
+            </div>
+
+            <ul class="list-unstyled components text-center">
+                <li class="active">
+                    <a href="index.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <i class="fas fa-home"></i> Główna
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="payment.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <i class="fas fa-balance-scale"></i> Oferty
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="reservation.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <i class="far fa-calendar-alt"></i>Rezerwacja
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content Holder -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link mx-2" href="user.html"><i class="fas fa-user"></i></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link mx-2" href="#"><i class="fas fa-envelope"></i></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link mx-2" href="#"><i class="fas fa-bell"></i></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+                    <div id='calendar'></div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {
+
+  $('#calendar').fullCalendar({
+    defaultDate: '2018-10-12',
+    locale: 'pl',
+    editable: true,
+    eventLimit: true, // allow "more" link when too many events
+    events: [
+      {
+        title: 'All Day Event',
+        start: '2018-03-01'
+      },
+      {
+        title: 'Long Event',
+        start: '2018-03-07',
+        end: '2018-03-10'
+      },
+      {
+        id: 999,
+        title: 'Repeating Event',
+        start: '2018-03-09T16:00:00'
+      },
+      {
+        id: 999,
+        title: 'Repeating Event',
+        start: '2018-03-16T16:00:00'
+      },
+      {
+        title: 'Conference',
+        start: '2018-03-11',
+        end: '2018-03-13'
+      },
+      {
+        title: 'Meeting',
+        start: '2018-03-12T10:30:00',
+        end: '2018-03-12T12:30:00'
+      },
+      {
+        title: 'Lunch',
+        start: '2018-03-12T12:00:00'
+      },
+      {
+        title: 'Meeting',
+        start: '2018-03-12T14:30:00'
+      },
+      {
+        title: 'Happy Hour',
+        start: '2018-03-12T17:30:00'
+      },
+      {
+        title: 'Dinner',
+        start: '2018-03-12T20:00:00'
+      },
+      {
+        title: 'Birthday Party',
+        start: '2018-03-13T07:00:00'
+      },
+      {
+        title: 'Click for Google',
+        url: 'http://google.com/',
+        start: '2018-03-28'
+      }
+    ]
+  });
+
+});
+
+</script>
+</body>
