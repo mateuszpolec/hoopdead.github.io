@@ -85,7 +85,7 @@ a, a:hover, a:focus {
 
 .download-header
 {
-    background: #000;
+    background: #2b2b2b;
     opacity: 0.9;
     padding: 70px;
     color: #fff;
@@ -159,7 +159,19 @@ a, a:hover, a:focus {
 .fa-home
 {
     font-size: 20px;
+    margin-right: 3px;
 }
+
+.fa-calendar-alt
+{
+    margin-right: 5px;
+}
+
+.fa-balance-scale
+{
+    margin-right: 3px;
+}
+
 .wrapper {
     display: flex;
     width: 100%;
