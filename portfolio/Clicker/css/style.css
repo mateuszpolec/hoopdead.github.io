@@ -1,0 +1,43 @@
+h1
+{
+	margin-top: 5vh;
+	text-align: center;
+	margin-bottom: 2vh;
+}
+
+.left-wrapper, .right-wrapper
+{
+	text-align: center;
+	width: 50%;
+	height: 60vh;
+}
+
+.left-wrapper
+{
+	border-right: 1px dotted #000;
+}
+
+.left-content
+{
+	font-size: 24px;
+}
+
+.cash
+{
+	font-size: 36px;
+}
+
+.fa-lemon
+{
+	color: yellow;
+}
+
+.fa-car
+{
+	color: #ad0f17;
+}
+
+.fa-money-bill-alt
+{
+	color: green;
+}
