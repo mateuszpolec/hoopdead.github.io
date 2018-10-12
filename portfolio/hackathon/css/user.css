@@ -19,7 +19,6 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
 }
 
 a, a:hover, a:focus {
@@ -53,6 +52,15 @@ a, a:hover, a:focus {
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
+
+.fa-star
+{
+    font-size: 25px;
+}
+.fa-arrow-alt-circle-up
+{
+    font-size: 25px;
+}
 .fa-trophy
 {
     font-size: 100px;
