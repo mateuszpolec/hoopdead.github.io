@@ -225,14 +225,19 @@ a, a:hover, a:focus {
 #sidebar .sidebar-header {
     padding: 20px;
     background: #63b754;
-    border-bottom: 1px solid #fff;
+}
+
+.img-profile {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    background: #63b754;
-    border-bottom: 1px solid #fff;
+    font-size: 16px;
 }
+
 
 #sidebar ul p {
     color: #fff;
