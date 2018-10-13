@@ -188,6 +188,13 @@ a, a:hover, a:focus {
 {
     margin-right: 5px;
 }
+
+.fa-child
+{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
 .wrapper {
     display: flex;
     width: 100%;

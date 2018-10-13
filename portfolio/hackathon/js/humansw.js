@@ -26,3 +26,7 @@ function legShow()
 
 }
 
+function stomachShow()
+{
+    document.getElementById("notepad").setAttribute("style", "display: block");
+}

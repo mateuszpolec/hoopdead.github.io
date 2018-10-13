@@ -52,6 +52,12 @@ a, a:hover, a:focus {
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
+.fa-child
+{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
 #x:hover
 {
     cursor: pointer;

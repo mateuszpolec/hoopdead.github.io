@@ -19,6 +19,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
+    color: #999;
 }
 
 a, a:hover, a:focus {
@@ -52,23 +53,15 @@ a, a:hover, a:focus {
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
-
-.fa-star
-{
-    font-size: 25px;
-}
-.fa-arrow-alt-circle-up
-{
-    font-size: 25px;
-}
-.fa-trophy
-{
-    font-size: 100px;
-    color: #f4c002;
-}
 .fa-user
 {
     transition: all .2s ease-in-out;
+}
+
+.fa-child
+{
+    font-size: 25px;
+    margin-right: 5px;
 }
 
 .fa-user:hover
@@ -98,7 +91,7 @@ a, a:hover, a:focus {
 
 .download-header
 {
-    background: #000;
+    background: #2b2b2b;
     opacity: 0.9;
     padding: 70px;
     color: #fff;
@@ -138,11 +131,6 @@ a, a:hover, a:focus {
     opacity: 0.9;
     color: none;
 }
-.fa-child
-{
-    font-size: 25px;
-    margin-right: 5px;
-}
 
 .fa-app-store-ios
 {
@@ -168,19 +156,28 @@ a, a:hover, a:focus {
     font-size: 20px;
 }
 
+.fa-child
+{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+
 .fa-user
 {
     font-size: 20px;
 }
-.fa-dumbbell
-{
-    margin-right: 5px;
-}
+
 
 .fa-home
 {
     font-size: 20px;
     margin-right: 3px;
+}
+
+.fa-dumbbell
+{
+    margin-right: 5px;
 }
 
 .fa-calendar-alt
@@ -192,6 +189,7 @@ a, a:hover, a:focus {
 {
     margin-right: 3px;
 }
+
 .wrapper {
     display: flex;
     width: 100%;

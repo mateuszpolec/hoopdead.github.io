@@ -12,16 +12,7 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="css/reservation.css">
-
-    <link href='fullcalendar.min.css' rel='stylesheet' />
-    <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
-    <script src='lib/moment.min.js'></script>
-    <script src='lib/jquery.min.js'></script>
-    <script src='fullcalendar.min.js'></script>
-    <script src='locale-all.js'></script>
-
-
+    <link rel="stylesheet" href="css/trenerzy.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -100,72 +91,3 @@
                     </div>
                 </div>
             </nav>
-
-                    <div id='calendar'></div>
-        </div>
-    </div>
-<script>
-    $(document).ready(function() {
-
-  $('#calendar').fullCalendar({
-    defaultDate: '2018-10-12',
-    locale: 'pl',
-    editable: true,
-    eventLimit: true, // allow "more" link when too many events
-    events: [
-    {
-        title: 'Zajęta sala - squash',
-        start: '2018-10-01'
-      },
-      {
-        title: 'Zajęta sauna',
-        start: '2018-10-05T12:00:00',
-	    end:  '2018-10-05T13:30:00'
-      },
-      {
-        title: 'Zumba',
-        start: '2018-10-09T18:30:00'
-      },
-      {
-        title: 'Zajęta odnowa biologiczna',
-        start: '2018-10-11T15:00:00',
-	    end:  '2018-10-11T18:00:00'
-      },
-      {
-        title: 'Joga',
-        start: '2018-10-15T06:30:00'
-      },
-      {
-        title: 'Dni Wałbrzycha - 100% zniżki',
-        url: 'https://www.walbrzyszek.com',
-        start: '2018-10-19'
-      },
-      {
-	    title: 'Pilates',
-	    start: '2018-10-20T18:30:00'
-      },
-      {
-    	title: 'Koszykówka: Górnik Trans.eu Wałbrzych - MKS Szczawno Zdrój',
-    	start: '2018-10-21T17:00:00'
-      },
-      {
-	    title: 'Zajęty squash',
-	    start: '2018-10-21T20:00:00'
-      },
-      {
-	    title: 'Zamknięta strefa fitness',
-	    start: '2018-10-23T13:00:00',
-	    end: '2018-10-23T23:00:00'
-      },
-      {
-	    title: 'Promocja na wszystie atrakcje - 40%',
-	    start: '2018-10-24T00:00:01',
-	    end: '2018-10-31T23:59:59'
-      }
-    ]
-  });
-
-});
-
-</script>
-</body>
