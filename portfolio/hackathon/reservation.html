@@ -62,6 +62,11 @@
                         <i class="far fa-calendar-alt"></i>Rezerwacja
                     </a>
                 </li>
+                <li class="active">
+                    <a href="training.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <i class="fas fa-dumbbell"></i>Treningi
+                    </a>
+                </li>
             </ul>
 
         </nav>
@@ -71,12 +76,6 @@
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
                     </button>
@@ -109,59 +108,54 @@
     editable: true,
     eventLimit: true, // allow "more" link when too many events
     events: [
-      {
-        title: 'All Day Event',
-        start: '2018-03-01'
+    {
+        title: 'Zajęta sala - squash',
+        start: '2018-10-01'
       },
       {
-        title: 'Long Event',
-        start: '2018-03-07',
-        end: '2018-03-10'
+        title: 'Zajęta sauna',
+        start: '2018-10-05T12:00:00',
+	    end:  '2018-10-05T13:30:00'
       },
       {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2018-03-09T16:00:00'
+        title: 'Zumba',
+        start: '2018-10-09T18:30:00'
       },
       {
-        id: 999,
-        title: 'Repeating Event',
-        start: '2018-03-16T16:00:00'
+        title: 'Zajęta odnowa biologiczna',
+        start: '2018-10-11T15:00:00',
+	    end:  '2018-10-11T18:00:00'
       },
       {
-        title: 'Conference',
-        start: '2018-03-11',
-        end: '2018-03-13'
+        title: 'Joga',
+        start: '2018-10-15T06:30:00'
       },
       {
-        title: 'Meeting',
-        start: '2018-03-12T10:30:00',
-        end: '2018-03-12T12:30:00'
+        title: 'Dni Wałbrzycha - 100% zniżki',
+        url: 'https://www.walbrzyszek.com',
+        start: '2018-10-19'
       },
       {
-        title: 'Lunch',
-        start: '2018-03-12T12:00:00'
+	    title: 'Pilates',
+	    start: '2018-10-20T18:30:00'
       },
       {
-        title: 'Meeting',
-        start: '2018-03-12T14:30:00'
+    	title: 'Koszykówka: Górnik Trans.eu Wałbrzych - MKS Szczawno Zdrój',
+    	start: '2018-10-21T17:00:00'
       },
       {
-        title: 'Happy Hour',
-        start: '2018-03-12T17:30:00'
+	    title: 'Zajęty squash',
+	    start: '2018-10-21T20:00:00'
       },
       {
-        title: 'Dinner',
-        start: '2018-03-12T20:00:00'
+	    title: 'Zamknięta strefa fitness',
+	    start: '2018-10-23T13:00:00',
+	    end: '2018-10-23T23:00:00'
       },
       {
-        title: 'Birthday Party',
-        start: '2018-03-13T07:00:00'
-      },
-      {
-        title: 'Click for Google',
-        url: 'http://google.com/',
-        start: '2018-03-28'
+	    title: 'Promocja na wszystie atrakcje - 40%',
+	    start: '2018-10-24T00:00:01',
+	    end: '2018-10-31T23:59:59'
       }
     ]
   });

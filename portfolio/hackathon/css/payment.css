@@ -184,6 +184,10 @@ a, a:hover, a:focus {
 {
     margin-right: 3px;
 }
+.fa-dumbbell
+{
+    margin-right: 5px;
+}
 .wrapper {
     display: flex;
     width: 100%;
