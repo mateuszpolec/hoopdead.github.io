@@ -373,3 +373,8 @@ a.article, a.article:hover {
     }
 
 }
+
+#map
+{
+    height: 100%;
+}

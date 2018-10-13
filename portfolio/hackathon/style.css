@@ -69,6 +69,12 @@ a, a:hover, a:focus {
     transform: scale(1.1);
 }
 
+.fa-map-marker-alt
+{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
 .fa-trophy
 {
     margin-right: 5px;

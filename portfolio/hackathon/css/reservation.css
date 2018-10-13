@@ -182,6 +182,12 @@ a, a:hover, a:focus {
     margin-right: 3px;
 }
 
+.fa-map-marker-alt
+{
+    font-size: 25px;
+    margin-right: 5px;
+}
+
 .fa-calendar-alt
 {
     margin-right: 5px;
