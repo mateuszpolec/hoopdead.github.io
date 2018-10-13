@@ -12,6 +12,10 @@
          <!-- Our Custom CSS -->
         <link rel="stylesheet" href="css/user.css">
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -49,37 +53,37 @@
     
                 <ul class="list-unstyled components text-center">
                     <li class="active">
-                        <a href="index.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <a href="index.html" aria-expanded="false" class = "mx-5">
                             <i class="fas fa-home"></i> Główna
                         </a>
                     </li>
                     <li class="active">
-                        <a href="index.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <a href="index.html" aria-expanded="false" class = "mx-5">
                             <i class="fas fa-balance-scale"></i> Oferty
                         </a>
                     </li>
                     <li class="active">
-                        <a href="reservation.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <a href="reservation.html" aria-expanded="false" class = "mx-5">
                             <i class="far fa-calendar-alt"></i>Rezerwacja
                         </a>
                     </li>
                     <li class="active">
-                        <a href="training.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <a href="training.html"  aria-expanded="false" class = "mx-5">
                             <i class="fas fa-dumbbell"></i>Treningi
                         </a>
                     </li>
                     <li class="active">
-                        <a href="trenerzy.html" data-toggle="collapse" aria-expanded="false" class = "mx-5">
+                        <a href="trenerzy.html" aria-expanded="false" class = "mx-5">
                             <i class="fas fa-child"></i>Trenerzy
                         </a>
                     </li>
                     <li class = "active">
-                        <a href = "ranking.html" data-toggle = "collapse" aria-expanded="false" class = "mx-5">
+                        <a href = "ranking.html"  aria-expanded="false" class = "mx-5">
                             <i class="fas fa-trophy" id = "trophy"></i>Ranking
                         </a>
                     </li>
                     <li class = "active">
-                        <a href = "dojazd.html" data-toggle = "collapse" aria-expanded="false" class = "mx-5">
+                        <a href = "dojazd.html"  aria-expanded="false" class = "mx-5">
                             <i class="fas fa-map-marker-alt"></i>Dojazd
                         </a>
                     </li>
@@ -155,7 +159,7 @@
                             <a href = "changepassword.html"><p>Zmień hasło</p></a>
                         </div>
                         <div class = "col-md-12 text-center">
-                           <p>Twój link do rekomendacji: <span class = "link"><b>jakub.nowak.1</b></span> </p> 
+                           <p>Twój link do rekomendacji: <span class = "link"><b>jakub.nowak.1</b></span>, ilość zaproszonych osób: <b>10</b>, aktualna zniżka: <b>5%</b></p> 
                         </div>
                     </div>
                 </div>
@@ -175,7 +179,7 @@
                         </div>
 
                         <div class = "col-md-4 text-center my-2">
-                            <img src = "img/icon-gym.png">
+                            <a><img src = "img/icon-gym.png" data-toggle="tooltip" data-placement = "right" title = "Siłownia"></a>
                         </div>
                         <div class = "col-md-4 text-center my-2">
                             <p>12-10-2018</p>
@@ -188,7 +192,7 @@
                         </div>
 
                         <div class = "col-md-4 text-center my-2">
-                            <img src = "img/icon-swimmingpool.png" data-toggle="tooltip" data-placement = "bottom" title = "Basen">
+                            <a><img src = "img/icon-swimmingpool.png" data-toggle="tooltip" data-placement = "right" title = "Basen"></a>
                         </div>
                         <div class = "col-md-4 text-center my-2">
                             <p>12-10-2018</p>
@@ -201,7 +205,7 @@
                         </div>
 
                         <div class = "col-md-4 text-center my-2">
-                            <img src = "img/icon-squash.png">
+                            <a><img src = "img/icon-squash.png" data-toggle="tooltip" data-placement = "right" title = "Squash"></a>
                         </div>
                         <div class = "col-md-4 text-center my-2">
                             <p>17-10-2018</p>
@@ -255,8 +259,22 @@
         </div>
     </div>
 </div>
-        <script src = "js/chart.js"></script>
-        <script src = "js/switch.js"></script>
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script>
+$('a').tooltip({
+   trigger: 'manual'
+});
+$(document).onload(function() {
+    $('a').tooltip('show');
+    setTimeout(function(){ $('a').tooltip('hide'); }, 3000);
+});
+</script>
+<script src = "js/chart.js"></script>
+<script src = "js/switch.js"></script>
 
     </body>
 </html>

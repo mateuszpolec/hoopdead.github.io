@@ -57,6 +57,16 @@ a, a:hover, a:focus {
 {
     font-size: 25px;
 }
+
+li
+{
+    transition: all .2s ease-in-out;
+}
+li:hover
+{
+    transform: scale(1.10);
+}
+
 .fa-arrow-alt-circle-up
 {
     font-size: 25px;

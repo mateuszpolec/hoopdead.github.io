@@ -49,7 +49,14 @@ a, a:hover, a:focus {
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
 }
-
+li
+{
+    transition: all .2s ease-in-out;
+}
+li:hover
+{
+    transform: scale(1.10);
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */

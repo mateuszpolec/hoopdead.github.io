@@ -199,6 +199,15 @@ a, a:hover, a:focus {
     margin-right: 5px;
 }
 
+li
+{
+    transition: all .2s ease-in-out;
+}
+li:hover
+{
+    transform: scale(1.10);
+}
+
 .fa-map-marker-alt
 {
     font-size: 25px;

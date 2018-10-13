@@ -84,6 +84,16 @@ a, a:hover, a:focus {
     font-size: 25px;
     margin-right: 5px;
 }
+
+li
+{
+    transition: all .2s ease-in-out;
+}
+li:hover
+{
+    transform: scale(1.10);
+}
+
 .fa-envelope:hover
 {
     transform: scale(1.1);
