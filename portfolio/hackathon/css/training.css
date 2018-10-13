@@ -76,10 +76,10 @@ a, a:hover, a:focus {
 {
     font-size: 25px;
 }
+
 .fa-trophy
 {
-    font-size: 100px;
-    color: #f4c002;
+    margin-right: 5px;
 }
 .fa-user
 {

@@ -69,6 +69,11 @@ a, a:hover, a:focus {
     transform: scale(1.1);
 }
 
+.fa-trophy
+{
+    margin-right: 5px;
+}
+
 .fa-envelope
 {
     transition: all .2s ease-in-out;
