@@ -238,6 +238,10 @@ a, a:hover, a:focus {
     font-size: 16px;
 }
 
+.link
+{
+    color: #555;
+}
 
 #sidebar ul p {
     color: #fff;
