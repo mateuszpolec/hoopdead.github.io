@@ -261,10 +261,6 @@ a, a:hover, a:focus {
 }
 
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
-    color: #fff;
-    background: #63b754;
-}
 
 
 a[data-toggle="collapse"] {

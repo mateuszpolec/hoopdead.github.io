@@ -30,3 +30,17 @@ function stomachShow()
 {
     document.getElementById("notepad").setAttribute("style", "display: block");
 }
+
+function showX()
+{
+    document.getElementById("leg1").setAttribute("style", "display: none");
+    document.getElementById("leg2").setAttribute("style", "display: none");
+    document.getElementById("leg3").setAttribute("style", "display: none");
+    document.getElementById("leg4").setAttribute("style", "display: none");
+    document.getElementById("clock").setAttribute("style", "display: none");
+    document.getElementById("czlowiek").setAttribute("style", "display: none");
+    document.getElementById("right").setAttribute("style", "display: block");
+    document.getElementById("left").setAttribute("style", "display: block");
+    document.getElementById("x").setAttribute("style", "display: none");
+
+}
