@@ -1,3 +1,15 @@
+body
+{
+	width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+	overflow-x: hidden;
+	background-image: url("../graph/background-daymode.png");
+	transition: ease-in 1s linear;
+
+}
+
 h1
 {
 	margin-top: 5vh;

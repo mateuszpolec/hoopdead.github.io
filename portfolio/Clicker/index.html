@@ -18,6 +18,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<!-- Silnik gry-->
 	<script src = "js/engine.js"></script>
+	<!--Toggle buttony-->
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 	
 </head>
 <body onload = "load();">
@@ -32,16 +35,20 @@
 				  <a class="navbar-brand" href="#"></a>
 				  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 					<ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
-						<a class="nav-link" href="#">Forum</a>
+							<a class="nav-link" href="#">Forum</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="#">Discord</a>
+							<a class="nav-link" href="#">Discord</a>
 					  </li>
 					  <li class="nav-item">
-						<a class="nav-link" href="#">Author</a>
+							<a class="nav-link" href="#">Author</a>
 					  </li>
 					  <li class = "nav-item">
-						<button class = "nav-link btn btn-link" onclick = "gameRestart()" data-toggle="tooltip" data-placement = "bottom" title = "Daje przy okazji urzędnków!">Restart</a>
+							<button class = "nav-link btn btn-link" onclick = "gameRestart()" data-toggle="tooltip" data-placement = "bottom" title = "Daje przy okazji urzędnków!">Restart</a></button>
+						</li>
+						<li class = "nav-item">
+								<button type="button" class="btn" onclick = "darkMode()"><i class="fas fa-moon"></i></button>
+						</li>
 					</ul>
 				  </div>
 				</nav>

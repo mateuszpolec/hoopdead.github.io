@@ -10,6 +10,12 @@ var carCost = 1000; //inicjalizacja zmiennej - koszt warsztatu samochodowego
 
 var officialAmmount = 0;
 
+var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
+
+//https://i.imgur.com/XcSj6q8.png - day mode
+
+//https://i.imgur.com/96n3rEk.png - night mode
+
 function cashClick(number)
 {
 	cash = cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount) + Math.pow(2, officialAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
@@ -126,3 +132,17 @@ function gameRestart()
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
 });
+
+function darkMode()
+{
+	if (darkmode == 0)
+	{
+		darkmode = 1;
+		document.body.style.backgroundImage = "url('https://i.imgur.com/96n3rEk.png')";
+	}
+	else
+	{
+		document.body.style.backgroundImage = "url('https://i.imgur.com/XcSj6q8.png')";
+		darkmode = 0;
+	}
+}
