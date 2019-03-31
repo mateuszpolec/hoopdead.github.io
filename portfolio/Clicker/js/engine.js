@@ -3,10 +3,12 @@ var cash = 0; //inicjalizacja zmiennej pieniedzy
 var lemonCash = 0; //inicjalizacja zmiennej - ile gracz bedzie dostawal pieniedzy po kupnie budki z lemoniada
 var lemonAmmount = 0; //inicjalizacja zmiennej - ilosc budek z lemoniada
 var lemonCost = 10; //inicjalizacja zmiennej - koszt za jedna budke z lemoniada
+var lemonCostVisible = 10;
 
 var carCash = 0; //inicjalizacja zmiennej - ile gracz bedzie dostawal pieniedzy po kupnie warsztatu samochodowego
 var carAmmount = 0; //inicjalizacja zmiennej - ilosc warsztatów samochodowych
 var carCost = 1000; //inicjalizacja zmiennej - koszt warsztatu samochodowego
+var carCostVisible = 1000;
 
 var officialAmmount = 0;
 
@@ -18,8 +20,9 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
 function cashClick(number)
 {
-	cash = cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount) + Math.pow(2, officialAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
+	cash = cash + number * 10000 + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
+	cashP = Beautify(cashP);
 	document.getElementById("cash").innerHTML = cashP; //wyswietlanie poprawionej liczby
 };
 
@@ -34,12 +37,15 @@ function lemonBuy()
 		lemonCash = (0.15*lemonAmmount); //mnoznik za jedna budki z lemoniada
 		cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 		lemonCashP = lemonCash.toFixed(1); //skracanie liczby do jednej po przecinku
+		cashP = Beautify(cashP);
+		lemonCashP = Beautify(lemonCashP);
 		document.getElementById('lemonAmmount').innerHTML = lemonAmmount; //wyswietlanie ilosci budek z lemoniada
 		document.getElementById('cash').innerHTML = cashP; //wyswietlanie poprawionej liczby - pieniadze
 		document.getElementById('lemonCash').innerHTML = lemonCashP; //wyswietlanie poprawionej liczby - zarobek budki z lemoniada
 	};
-    lemonCost = Math.floor(10 * Math.pow(1.3,lemonAmmount)); //wzór na koszt kolejnej budki z lemoniada
-	document.getElementById('lemonCost').innerHTML = lemonCost; //wyswietlanie kosztu kolejnej budki z lemoniada
+	lemonCost = Math.floor(10 * Math.pow(1.3,lemonAmmount)); //wzór na koszt kolejnej budki z lemoniada
+	lemonCostVisible = Beautify(lemonCost)
+	document.getElementById('lemonCost').innerHTML = lemonCostVisible; //wyswietlanie kosztu kolejnej budki z lemoniada
 };
 
 function carBuy()
@@ -51,12 +57,15 @@ function carBuy()
 		carCash = (10*carAmmount);
 		cashP = cash.toFixed(1);
 		carCashP = carCash.toFixed(1);
+		cashP = Beautify(cashP);
+		carCashP = Beautify(carCashP);
 		document.getElementById('carAmmount').innerHTML = carAmmount;
 		document.getElementById('cash').innerHTML = cashP;
 		document.getElementById('carCash').innerHTML = carCashP;
 	};
 	carCost = Math.floor(10 * Math.pow(1.4, carAmmount));
-	document.getElementById('carCost').innerHTML = carCost;
+	carCostVisible = Beautify(carCost);
+	document.getElementById('carCost').innerHTML = carCostVisible;
 }
 
 
@@ -91,6 +100,11 @@ function load()
 	cashP = cash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	carCashP = carCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
+	cashP = Beautify(cashP);
+	lemonCashP = Beautify(lemonCashP);
+	carCashP = Beautify(carCashP);
+	lemonCost = Beautify(lemonCost);
+	carCost = Beautify(carCost);
 	document.getElementById('cash').innerHTML = cashP;
 	document.getElementById('lemonCash').innerHTML = lemonCashP;
 	document.getElementById('lemonCost').innerHTML = lemonCost;
@@ -155,4 +169,30 @@ function darkMode()
 		$('.card-text').css('color', 'black');
 		$('.navbar-light').css('background-color', '#ffffff');
 	}
+}
+
+
+function Beautify(what,floats)//Zmienia 9999999 w 9,999,999 :3 //credits for https://github.com/coderdojoindy/
+{
+	var str='';
+	what=Math.round(what*100000)/100000;
+	if (floats>0)
+	{
+		var floater=what-Math.floor(what);
+		floater=Math.round(floater*100000)/100000;
+		var floatPresent=floater?1:0;
+		floater=(floater.toString()+'0000000').slice(2,2+floats);
+		str=Beautify(Math.floor(what))+(floatPresent?('.'+floater):'');
+	}
+	else
+	{
+		what=Math.floor(what);
+		what=(what+'').split('').reverse();
+		for (var i in what)
+		{
+			if (i%3==0 && i>0) str=','+str;
+			str=what[i]+str;
+		}
+	}
+	return str;
 }
