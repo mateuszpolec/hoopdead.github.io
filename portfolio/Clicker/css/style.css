@@ -6,8 +6,7 @@ body
     padding: 0px;
 	overflow-x: hidden;
 	background-image: url("../graph/background-daymode.png");
-	transition: ease-in 1s linear;
-
+	transition: 1.5s;
 }
 
 h1
@@ -27,6 +26,7 @@ h1
 .left-wrapper
 {
 	border-right: 1px dotted #000;
+	height: 100%;
 }
 
 .left-content
@@ -52,4 +52,24 @@ h1
 .fa-money-bill-alt
 {
 	color: green;
+}
+
+#header
+{
+	transition: ease-in-out 1s;
+}
+
+.card
+{
+	transition: ease 0.8s;
+}
+
+#mainClicker
+{
+	background: none;
+}
+
+.card-header
+{
+	border: none;
 }
