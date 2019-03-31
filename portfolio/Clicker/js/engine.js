@@ -20,7 +20,7 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
 function cashClick(number)
 {
-	cash = cash + number * 10000 + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
+	cash = cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 	cashP = Beautify(cashP);
 	document.getElementById("cash").innerHTML = cashP; //wyswietlanie poprawionej liczby
