@@ -140,7 +140,7 @@ function darkMode()
 		darkmode = 1;
 		document.body.style.backgroundImage = "url('https://i.imgur.com/96n3rEk.png')";
 		document.getElementById("header").style.color='#ddc986';
-		$('.card').css('background-color', '#000000'); 
+		$('.switch').css('background-color', '#000000'); 
 		$('.card-title').css('color', 'white');
 		$('.card-text').css('color', 'white');
 		$('.navbar-light').css('background-color', '#000000');
@@ -150,7 +150,7 @@ function darkMode()
 		document.body.style.backgroundImage = "url('https://i.imgur.com/XcSj6q8.png')";
 		document.getElementById("header").style.color='#000000';
 		darkmode = 0;
-		$('.card').css('background-color', '#ffffff'); 
+		$('.switch').css('background-color', '#ffffff'); 
 		$('.card-title').css('color', 'black');
 		$('.card-text').css('color', 'black');
 		$('.navbar-light').css('background-color', '#ffffff');

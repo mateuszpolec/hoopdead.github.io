@@ -7,6 +7,8 @@ body
 	overflow-x: hidden;
 	background-image: url("../graph/background-daymode.png");
 	transition: 1.5s;
+	font-family: 'Varela Round', sans-serif;
+
 }
 
 h1
@@ -52,6 +54,13 @@ h1
 .fa-money-bill-alt
 {
 	color: green;
+	font-size: 75px;
+	transition: ease-in-out 0.5s;
+}
+
+.fa-money-bill-alt:hover
+{
+	transform: scale(1.1);
 }
 
 #header
@@ -67,9 +76,13 @@ h1
 #mainClicker
 {
 	background: none;
+	font-size: 18px;
 }
 
 .card-header
 {
 	border: none;
+	background-color: #302f2f;
+	opacity: 0.80;
+	color: #fffbf9;
 }
