@@ -4,15 +4,19 @@ var lemonCash = 0; //inicjalizacja zmiennej - ile gracz bedzie dostawal pieniedz
 var lemonAmmount = 0; //inicjalizacja zmiennej - ilosc budek z lemoniada
 var lemonCost = 10; //inicjalizacja zmiennej - koszt za jedna budke z lemoniada
 var lemonCostVisible = 10;
+var lemonCashVisible = 0;
 
 var carCash = 0; //inicjalizacja zmiennej - ile gracz bedzie dostawal pieniedzy po kupnie warsztatu samochodowego
 var carAmmount = 0; //inicjalizacja zmiennej - ilosc warsztatów samochodowych
 var carCost = 1000; //inicjalizacja zmiennej - koszt warsztatu samochodowego
 var carCostVisible = 1000;
+var carCashVisible = 0;
 
 var officialAmmount = 0;
 
 var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
+
+var temp = 100;
 
 //https://i.imgur.com/XcSj6q8.png - day mode
 
@@ -20,10 +24,10 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
 function cashClick(number)
 {
-	cash = cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
+	cash = 100 + cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 	cashP = Beautify(cashP);
-	document.getElementById("cash").innerHTML = cashP; //wyswietlanie poprawionej liczby
+	$('#cash').html(cashP);
 };
 
 
@@ -38,14 +42,20 @@ function lemonBuy()
 		cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 		lemonCashP = lemonCash.toFixed(1); //skracanie liczby do jednej po przecinku
 		cashP = Beautify(cashP);
-		lemonCashP = Beautify(lemonCashP);
-		document.getElementById('lemonAmmount').innerHTML = lemonAmmount; //wyswietlanie ilosci budek z lemoniada
-		document.getElementById('cash').innerHTML = cashP; //wyswietlanie poprawionej liczby - pieniadze
-		document.getElementById('lemonCash').innerHTML = lemonCashP; //wyswietlanie poprawionej liczby - zarobek budki z lemoniada
+		if (lemonCash >= 1000)
+		{
+			$('#lemonCash').html(lemonCashVisible);
+		}
+		else
+		{
+			$('lemonCash').html(lemonCashP);
+		}
+		lemonCost = Math.floor(10 * Math.pow(1.3,lemonAmmount)); //wzór na koszt kolejnej budki z lemoniada
+		lemonCostVisible = Beautify(lemonCost);
+		$('#lemonCost').html(lemonCostVisible);
+		$('#lemmonAmount').html(lemmonAmmount);
+		$('#cash').html(cashP);
 	};
-	lemonCost = Math.floor(10 * Math.pow(1.3,lemonAmmount)); //wzór na koszt kolejnej budki z lemoniada
-	lemonCostVisible = Beautify(lemonCost)
-	document.getElementById('lemonCost').innerHTML = lemonCostVisible; //wyswietlanie kosztu kolejnej budki z lemoniada
 };
 
 function carBuy()
@@ -58,14 +68,14 @@ function carBuy()
 		cashP = cash.toFixed(1);
 		carCashP = carCash.toFixed(1);
 		cashP = Beautify(cashP);
-		carCashP = Beautify(carCashP);
-		document.getElementById('carAmmount').innerHTML = carAmmount;
-		document.getElementById('cash').innerHTML = cashP;
-		document.getElementById('carCash').innerHTML = carCashP;
+		carCashVisible = Beautify(carCashP);
+		carCost = 1000 + carAmmount * 2;
+		carCostVisible = Beautify(carCost);
+		$('#carCost').html(carCostVisible);
+		$('#carAmmount').html(carAmmount);
+		$('#cash').html(cashP);
+		$('#carCash').html(carCashVisible);
 	};
-	carCost = Math.floor(10 * Math.pow(1.4, carAmmount));
-	carCostVisible = Beautify(carCost);
-	document.getElementById('carCost').innerHTML = carCostVisible;
 }
 
 
@@ -73,6 +83,7 @@ window.setInterval(function(){
 	
 	cashClick((lemonAmmount*0.15) + (carAmmount * 10)); //ilosc pieniazkow na sekunde
 	save(); //wywolanie funkcji zapisujacej stan gry
+
 
 	
 }, 1000); //1 sekunda
@@ -101,17 +112,17 @@ function load()
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	carCashP = carCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	cashP = Beautify(cashP);
-	lemonCashP = Beautify(lemonCashP);
-	carCashP = Beautify(carCashP);
-	lemonCost = Beautify(lemonCost);
-	carCost = Beautify(carCost);
-	document.getElementById('cash').innerHTML = cashP;
-	document.getElementById('lemonCash').innerHTML = lemonCashP;
-	document.getElementById('lemonCost').innerHTML = lemonCost;
-	document.getElementById('lemonAmmount').innerHTML = lemonAmmount;
-	document.getElementById('carCash').innerHTML = carCash;
-	document.getElementById('carCost').innerHTML = carCost;
-	document.getElementById('carAmmount').innerHTML = carAmmount;
+	lemonCashVisible = Beautify(lemonCashP);
+	carCashVisible = Beautify(carCashP);
+	carCostVisible = Beautify(carCost);
+	lemonCostVisible = Beautify(lemonCost);
+	$('#cash').html(cashP);
+	$('#lemonCash').html(lemonCashP);
+	$('#lemonCost').html(lemonCostVisible);
+	$('#lemonAmmount').html(lemonAmmount);
+	$('#carCash').html(carCash);
+	$('#carCost').html(carCostVisible);
+	$('#carAmmount').html(carAmmount);
 }
 
 function gameRestart()
@@ -132,42 +143,41 @@ function gameRestart()
 	carCash = 0;
 	carCost = 1000;
 	carAmmount = 0;
-	document.getElementById('cash').innerHTML = cash;
-	document.getElementById('lemonCash').innerHTML = lemonCash;
-	document.getElementById('lemonCost').innerHTML = lemonCost;
-	document.getElementById('lemonAmmount').innerHTML = lemonAmmount;
-	document.getElementById('carCash').innerHTML = carCash;
-	document.getElementById('carCost').innerHTML = carCost;
-	document.getElementById('carAmmount').innerHTML = carAmmount;
-	document.getElementById('officialAmmount').innerHTML = officialAmmountP;
+	$('#cash').html(cash);
+	$('#lemonCash').html(lemonCash);
+	$('#lemonCost').html(lemonCost);
+	$('#lemonAmmount').html(lemonAmmount);
+	$('#carCash').html(carCash);
+	$('#carCost').html(carCost);
+	$('#carAmmount').html(carAmmount);
+	$('#officialAmmount').html(officialAmmountP);
+
 	
 }
-
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip(); 
-});
 
 function darkMode()
 {
 	if (darkmode == 0)
 	{
 		darkmode = 1;
-		document.body.style.backgroundImage = "url('https://i.imgur.com/96n3rEk.png')";
-		document.getElementById("header").style.color='#ddc986';
+		$('body').css("backgroundImage", "url('https://i.imgur.com/96n3rEk.png')");
+		$('#header').css("color", '#ddc986');
 		$('.switch').css('background-color', '#000000'); 
 		$('.card-title').css('color', 'white');
 		$('.card-text').css('color', 'white');
 		$('.navbar-light').css('background-color', '#000000');
+		$('#cookieNumber').css('color', '#ffffff');
 	}
 	else
 	{
-		document.body.style.backgroundImage = "url('https://i.imgur.com/XcSj6q8.png')";
-		document.getElementById("header").style.color='#000000';
 		darkmode = 0;
+		$('body').css("backgroundImage", "url('https://i.imgur.com/XcSj6q8.png')");
+		$('#header').css('color', '#000000');
 		$('.switch').css('background-color', '#ffffff'); 
 		$('.card-title').css('color', 'black');
 		$('.card-text').css('color', 'black');
 		$('.navbar-light').css('background-color', '#ffffff');
+		$('#cookieNumber').css('color', '#000000');
 	}
 }
 
@@ -196,3 +206,19 @@ function Beautify(what,floats)//Zmienia 9999999 w 9,999,999 :3 //credits for htt
 	}
 	return str;
 }
+
+
+
+
+$(document).ready(function()//particle z iloscia pieniedzy przy kliknieciu 
+{
+	$('#cookieNumber').html('+<b>' + temp + '</b>' + ' $');
+	$('.fa-money-bill-alt').click(function() 
+	{
+		$('#cookieNumber').addClass('animate').delay(50).queue(function(next) 
+		{
+			$(this).removeClass('animate');
+			next();
+		});
+	});
+});
