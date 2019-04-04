@@ -48,12 +48,12 @@ function lemonBuy()
 		}
 		else
 		{
-			$('lemonCash').html(lemonCashP);
+			$('#lemonCash').html(lemonCashP);
 		}
 		lemonCost = Math.floor(10 * Math.pow(1.3,lemonAmmount)); //wzór na koszt kolejnej budki z lemoniada
 		lemonCostVisible = Beautify(lemonCost);
 		$('#lemonCost').html(lemonCostVisible);
-		$('#lemmonAmount').html(lemmonAmmount);
+		$('#lemonAmmount').html(lemonAmmount);
 		$('#cash').html(cashP);
 	};
 };
