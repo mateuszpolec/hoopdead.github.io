@@ -18,6 +18,10 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
 var temp = 100;
 
+var lemonAchiv, x = "";
+var lemonaI = 0;
+
+
 //https://i.imgur.com/XcSj6q8.png - day mode
 
 //https://i.imgur.com/96n3rEk.png - night mode
@@ -83,6 +87,9 @@ window.setInterval(function(){
 	
 	cashClick((lemonAmmount*0.15) + (carAmmount * 10)); //ilosc pieniazkow na sekunde
 	save(); //wywolanie funkcji zapisujacej stan gry
+	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
+	$('#lemonAchiv').html(x);
+
 
 
 	
@@ -97,7 +104,10 @@ function save()
 	localStorage.setItem('carCash', JSON.stringify(carCash)); //zapisuje stan zarobku warsztatu samochodowego
 	localStorage.setItem('carCost', JSON.stringify(carCost)); //zapisuje stan kosztu jednego warsztatu samochodowego
 	localStorage.setItem('carAmmount', JSON.stringify(carAmmount)); //zapisuje ilosc warsztatów samochodowych
+	localStorage.setItem('lemonaI', JSON.stringify(lemonaI));
+	console.log(JSON.parse(localStorage.getItem('lemonaI')));
 }
+
 
 function load()
 {
@@ -108,6 +118,7 @@ function load()
 	carCash = JSON.parse(localStorage.getItem('carCash')); //wczytuje stan zarobku wasztatu samochodowego
 	carCost = JSON.parse(localStorage.getItem('carCost')); //wczytuje koszt jednego warsztatu samochodowego
 	carAmmount = JSON.parse(localStorage.getItem('carAmmount')); //wczytuje ilosc warsztatów samochodowych
+	lemonaI = JSON.parse(localStorage.getItem('lemonaI'));
 	cashP = cash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	carCashP = carCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
@@ -123,6 +134,9 @@ function load()
 	$('#carCash').html(carCash);
 	$('#carCost').html(carCostVisible);
 	$('#carAmmount').html(carAmmount);
+	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
+	$('#lemonAchiv').html(x);
+
 }
 
 function gameRestart()
@@ -222,3 +236,31 @@ $(document).ready(function()//particle z iloscia pieniedzy przy kliknieciu
 		});
 	});
 });
+
+//* System for additional % from each place */
+function lemonAchivBuy()
+{
+	if(cash >= lemonAchiv.prices[lemonaI])
+	{
+		alert('Jasne, masz wystarczajaco duzo pieniedzy!');
+		lemonaI = lemonaI + 1;
+	}
+	else
+	{
+		alert('Nie, nie masz wystarzcajaco duzo pieniedzy.');
+	}
+}
+
+lemonAchiv = {
+	"achivs": [ "Extra Lemonade", "Lemonade Renter", "Lemonade Stand Franchise"],
+	"prices": [ "10000", "500000", "2500000"]
+};
+
+$(document).ready(function(){
+	$('#lemonHover').hover(function(){
+		$('#lemonAchiv').css("visibility", "visible");
+		}, function(){
+		$('#lemonAchiv').css("visibility", "hidden");
+	});
+});
+
