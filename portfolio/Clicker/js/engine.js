@@ -112,7 +112,7 @@ function save()
 
 function load()
 {
-	var lemonaI = 0;
+	lemonaI = 0;
 	cash = JSON.parse(localStorage.getItem('cash')); //wczytuje stan pieniedzy
 	lemonCash = JSON.parse(localStorage.getItem('lemonCash')); //wczytuje stan zarobku budek z lemoniada
 	lemonCost = JSON.parse(localStorage.getItem('lemonCost')); //wczytuje stan kosztu jednej budki z lemoniada
