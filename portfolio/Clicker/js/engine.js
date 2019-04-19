@@ -112,6 +112,7 @@ function save()
 
 function load()
 {
+	var lemonaI = 0;
 	cash = JSON.parse(localStorage.getItem('cash')); //wczytuje stan pieniedzy
 	lemonCash = JSON.parse(localStorage.getItem('lemonCash')); //wczytuje stan zarobku budek z lemoniada
 	lemonCost = JSON.parse(localStorage.getItem('lemonCost')); //wczytuje stan kosztu jednej budki z lemoniada
@@ -135,10 +136,6 @@ function load()
 	$('#carCash').html(carCash);
 	$('#carCost').html(carCostVisible);
 	$('#carAmmount').html(carAmmount);
-	if(lemonaI == null)
-	{
-		var lemonaI = 0;
-	}
 	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
 	$('#lemonAchiv').html(x);
 
