@@ -150,6 +150,8 @@ function gameRestart()
 	localStorage.removeItem('carCash', JSON.parse(carCash));
 	localStorage.removeItem('carCost', JSON.parse(carCost));
 	localStorage.removeItem('carAmmount', JSON.parse(carAmmount));
+	localStorage.removeItem('lemonaI', JSON.parse(lemonaI));
+	lemonaI = 0;
 	cash = 0;
 	lemonCash = 0;
 	lemonCost = 10;
