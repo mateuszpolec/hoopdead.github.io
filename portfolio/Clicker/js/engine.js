@@ -19,6 +19,7 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 var temp = 100;
 
 var lemonAchiv, x = "";
+
 var lemonaI = 0;
 
 
@@ -134,6 +135,10 @@ function load()
 	$('#carCash').html(carCash);
 	$('#carCost').html(carCostVisible);
 	$('#carAmmount').html(carAmmount);
+	if(lemonaI == null)
+	{
+		var lemonaI = 0;
+	}
 	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
 	$('#lemonAchiv').html(x);
 
