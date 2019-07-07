@@ -11,6 +11,9 @@ var carAmmount = 0; //inicjalizacja zmiennej - ilosc warsztatów samochodowych
 var carCost = 1000; //inicjalizacja zmiennej - koszt warsztatu samochodowego
 var carCostVisible = 1000;
 var carCashVisible = 0;
+var pizzaCash = 10000;
+var pizzaAmmount = 0;
+var pizzaCost = 45000;
 
 var officialAmmount = 0;
 
@@ -18,9 +21,6 @@ var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
 var temp = 100;
 
-var lemonAchiv, x = "";
-
-var lemonaI = 0;
 
 
 //https://i.imgur.com/XcSj6q8.png - day mode
@@ -29,7 +29,7 @@ var lemonaI = 0;
 
 function cashClick(number)
 {
-	cash = 100 + cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
+	cash = 10000 + cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 	cashP = Beautify(cashP);
 	$('#cash').html(cashP);
@@ -68,13 +68,13 @@ function carBuy()
 	if (cash >= carCost)
 	{
 		carAmmount = carAmmount + 1; //cała sekcja działa dokładnie tak samo, jak ta wyżej, tylko z warsztatami samochodowymi
-		cash = cash - carCash;
+		cash = cash - carCost;
 		carCash = (10*carAmmount);
 		cashP = cash.toFixed(1);
 		carCashP = carCash.toFixed(1);
 		cashP = Beautify(cashP);
 		carCashVisible = Beautify(carCashP);
-		carCost = 1000 + carAmmount * 2;
+		carCost = 1000 * carAmmount * 2;
 		carCostVisible = Beautify(carCost);
 		$('#carCost').html(carCostVisible);
 		$('#carAmmount').html(carAmmount);
@@ -83,13 +83,31 @@ function carBuy()
 	};
 }
 
+function pizzaBuy()
+{
+	if(cash >= pizzaCost)
+	{
+		pizzaAmmount = pizzaAmmount + 1;
+		cash = cash - pizzaCost;
+		cashP = cash.toFixed(1);
+		cashP = Beautify(cashP);
+		pizzaCash = (25*pizzaAmmount);
+		pizzaCashP = Beautify(pizzaCash);
+		pizzaCost = 2 * 45000 * pizzaAmmount;
+		pizzaCostP = Beautify(pizzaCost);
+		$('#pizzaCost').html(pizzaCostP);
+		$('#pizzaAmmount').html(pizzaAmmount);
+		$('#pizzaCash').html(pizzaCashP);
+		$('#cash').html(cashP);
+	}
+}
+
 
 window.setInterval(function(){
 	
 	cashClick((lemonAmmount*0.15) + (carAmmount * 10)); //ilosc pieniazkow na sekunde
 	save(); //wywolanie funkcji zapisujacej stan gry
-	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
-	$('#lemonAchiv').html(x);
+
 
 
 
@@ -106,13 +124,17 @@ function save()
 	localStorage.setItem('carCost', JSON.stringify(carCost)); //zapisuje stan kosztu jednego warsztatu samochodowego
 	localStorage.setItem('carAmmount', JSON.stringify(carAmmount)); //zapisuje ilosc warsztatów samochodowych
 	localStorage.setItem('lemonaI', JSON.stringify(lemonaI));
+	localStorage.setItem('pizzaCash', JSON.stringify(pizzaCash));
+	localStorage.setItem('pizzaCost', JSON.stringify(pizzaCost));
+	localStorage.setItem('pizzaAmmount', JSON.stringify(pizzaAmmount));
 	console.log(JSON.parse(localStorage.getItem('lemonaI')));
+	console.log(JSON.parse(localStorage.getItem('pizzaAmmount')));
+
 }
 
 
 function load()
 {
-	lemonaI = 0;
 	cash = JSON.parse(localStorage.getItem('cash')); //wczytuje stan pieniedzy
 	lemonCash = JSON.parse(localStorage.getItem('lemonCash')); //wczytuje stan zarobku budek z lemoniada
 	lemonCost = JSON.parse(localStorage.getItem('lemonCost')); //wczytuje stan kosztu jednej budki z lemoniada
@@ -121,14 +143,16 @@ function load()
 	carCost = JSON.parse(localStorage.getItem('carCost')); //wczytuje koszt jednego warsztatu samochodowego
 	carAmmount = JSON.parse(localStorage.getItem('carAmmount')); //wczytuje ilosc warsztatów samochodowych
 	lemonaI = JSON.parse(localStorage.getItem('lemonaI'));
+	pizzaCash = JSON.parse(localStorage.getItem('pizzaCash'));
+	pizzaCost = JSON.parse(localStorage.getItem('pizzaCost'));
+	pizzaAmmount = JSON.parse(localStorage.getItem('pizzaAmmount'));
 	cashP = cash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
-	carCashP = carCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
+	carCostVisible = Beautify(carCost);
 	cashP = Beautify(cashP);
 	lemonCashVisible = Beautify(lemonCashP);
-	carCashVisible = Beautify(carCashP);
-	carCostVisible = Beautify(carCost);
 	lemonCostVisible = Beautify(lemonCost);
+	pizzaCostP = Beautify(pizzaCost);
 	$('#cash').html(cashP);
 	$('#lemonCash').html(lemonCashP);
 	$('#lemonCost').html(lemonCostVisible);
@@ -136,8 +160,9 @@ function load()
 	$('#carCash').html(carCash);
 	$('#carCost').html(carCostVisible);
 	$('#carAmmount').html(carAmmount);
-	x = " Hola, hola, <b>" + lemonAchiv.achivs[lemonaI] + "</b> is already avaiable! " + "Sir, you have to pay <b>" + Beautify(lemonAchiv.prices[lemonaI]) + "</b>$ for it!";
-	$('#lemonAchiv').html(x);
+	$('#pizzaCost').html(pizzaCostP);
+	$('#pizzaAmmount').html(pizzaAmmount);
+	$('#pizzaCash').html(pizzaCash);
 
 }
 
@@ -152,7 +177,9 @@ function gameRestart()
 	localStorage.removeItem('carCash', JSON.parse(carCash));
 	localStorage.removeItem('carCost', JSON.parse(carCost));
 	localStorage.removeItem('carAmmount', JSON.parse(carAmmount));
-	localStorage.removeItem('lemonaI', JSON.parse(lemonaI));
+	localStorage.removeItem('pizzaCash', JSON.parse(pizzaCash));
+	localStorage.removeItem('pizzaCost', JSON.parse(pizzaCost));
+	localStorage.removeItem('pizzaAmmount', JSON.parse(pizzaAmmount));
 	lemonaI = 0;
 	cash = 0;
 	lemonCash = 0;
@@ -161,6 +188,9 @@ function gameRestart()
 	carCash = 0;
 	carCost = 1000;
 	carAmmount = 0;
+	pizzaCash = 10000;
+	pizzaCost = 45000;
+	pizzaAmmount = 0;
 	$('#cash').html(cash);
 	$('#lemonCash').html(lemonCash);
 	$('#lemonCost').html(lemonCost);
@@ -169,6 +199,9 @@ function gameRestart()
 	$('#carCost').html(carCost);
 	$('#carAmmount').html(carAmmount);
 	$('#officialAmmount').html(officialAmmountP);
+	$('#pizzaCash').html(pizzaCash);
+	$('#pizzaCost').html(pizzaCost);
+	$('#pizzaAmmount').html(pizzaAmmount);
 
 	
 }
@@ -238,33 +271,6 @@ $(document).ready(function()//particle z iloscia pieniedzy przy kliknieciu
 			$(this).removeClass('animate');
 			next();
 		});
-	});
-});
-
-//* System for additional % from each place */
-function lemonAchivBuy()
-{
-	if(cash >= lemonAchiv.prices[lemonaI])
-	{
-		alert('Jasne, masz wystarczajaco duzo pieniedzy!');
-		lemonaI = lemonaI + 1;
-	}
-	else
-	{
-		alert('Nie, nie masz wystarzcajaco duzo pieniedzy.');
-	}
-}
-
-lemonAchiv = {
-	"achivs": [ "Extra Lemonade", "Lemonade Renter", "Lemonade Stand Franchise"],
-	"prices": [ "10000", "500000", "2500000"]
-};
-
-$(document).ready(function(){
-	$('#lemonHover').hover(function(){
-		$('#lemonAchiv').css("visibility", "visible");
-		}, function(){
-		$('#lemonAchiv').css("visibility", "hidden");
 	});
 });
 
