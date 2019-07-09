@@ -10,12 +10,12 @@ Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery
 
 # Hackathon - general information
 
-That's first project, that I've made with my friends during 48 hours of programming conquest in our city - Wałbrzych. We took part in the event twice - first time in 2017,
-and second time in 2018. My role in whole project was Frontend developer - first project cannot be found on this site because we deleted it just after event. Second project is here, and you can find it on:
+> That's first project, that I've made with my friends during 48 hours of programming conquest in our city - Wałbrzych. We took part in the event twice - first time in 2017,
+> and second time in 2018. My role in whole project was Frontend developer - first project cannot be found on this site because we deleted it just after event. Second project ? > is here, and you can find it on:
 
-Pages: hoopdead.github.io/portfolio/hackathon/
+**Pages**: [Link](hoopdead.github.io/portfolio/hackathon/)
 
-List of files (html):
+**List of files** (html):
 
 - index.html
 - payment.html
@@ -45,7 +45,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/h
 
 ### Contribute
 
-Source code: github.com/hoopdead.github.io/portfolio/hackacthon/
+Source code: [Link](github.com/hoopdead.github.io/portfolio/hackacthon/)
 
 ### License
 
@@ -58,13 +58,13 @@ Mateusz Połeć
 
 ===============================================================================
 
-# Hackathon - general information
+# Veqer_portfolio - general information
 
-Second project, that came out from my hands - I just had to design website, without texts for a movie editor, that works for YouTubers.
+> Second project, that came out from my hands - I just had to design website, without texts for a movie editor, that works for YouTubers.
 
-Pages: hoopdead.github.io/portfolio/veqer_portfolio
+**Pages**: [Link](hoopdead.github.io/portfolio/veqer_portfolio/)
 
-List of files (html):
+**List of files** (html):
 
 - index.html
 
@@ -75,21 +75,21 @@ Designing everything.
 Programming.
 Testing, about bugs on devices.
 
-# Veqer_portfolio - instalation
+### Veqer_portfolio - instalation
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
 git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/veqer_portfolio/
 
-# Contribute
+### Contribute
 
-Source code: github.com/hoopdead.github.io/portfolio/veqer_portfolio/
+Source code: [Link](github.com/hoopdead.github.io/portfolio/veqer_portfolio/)
 
-# License
+### License
 
 This project is released under the MIT Licence. See the bundled LICENSE file for details.
 
-#Authour
+### Authour
 
 Mateusz Połeć
 
@@ -97,11 +97,11 @@ Mateusz Połeć
 
 # Fishhub - general infromation
 
-Third project - fishub, it's open-source code for everyone, that want to develop their own website about food, or advertise the restaurant. I made it for myself, to improve skills, get new experiecnes about dealing with problems.
+> Third project - fishub, it's open-source code for everyone, that want to develop their own website about food, or advertise the restaurant. I made it for myself, to improve > > skills, get new experiecnes about dealing with problems.
 
-Pages: hoopdead.github.io/portfolio/fishhub/
+**Pages**: [Link](hoopdead.github.io/portfolio/fishhub/)
 
-List of files (html):
+**List of files** (html):
 
 index.html
 
@@ -117,7 +117,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/f
 
 ### Contribute
 
-Source code: github.com/hoopdead.github.io/portfolio/fishhub/
+Source code: [Link](github.com/hoopdead.github.io/portfolio/fishhub/)
 
 ### License
 
@@ -132,14 +132,14 @@ Mateusz Połeć
 
 # Clicker - general information
 
-Fourth project - that's project, that im currently working on. The main idea is to create a simple JavaScript game, without using any outside engine, just raw code. 
-Right now the game is still not finished, and I guess the whole process will take much time, before leaving workbench. Short description about game - you're a new president of area, that is absoulutely cut off from any society. You've to build a huge empire, using only clicking, and planing policy in menu.
+> Fourth project - that's project, that im currently working on. The main idea is to create a simple JavaScript game, without using any outside engine, just raw code. 
+> Right now the game is still not finished, and I guess the whole process will take much time, before leaving workbench. Short description about game - you're a new president ? > of area, that is absoulutely cut off from any society. You've to build a huge empire, using only clicking, and planing policy in menu.
 
-Pages: hoopdead.github.io/portfolio/Clicker/
+**Pages**: [Link](hoopdead.github.io/portfolio/Clicker/)
 
-List of files (html):
+**List of files** (html):
 
-index.html
+- index.html
 
 Creation process, and work method:
 
@@ -177,7 +177,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/C
 
 ### Contribute
 
-Source code: github.com/hoopdead.github.io/portfolio/Clicker/
+Source code: [Link](github.com/hoopdead.github.io/portfolio/Clicker/)
 
 ### License
 
