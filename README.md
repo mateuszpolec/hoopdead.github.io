@@ -6,7 +6,8 @@ Right now you can find here four project, and each with own story.
 
 Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
 
-===============================================================================
+
+
 
 # Hackathon - general information
 
@@ -45,7 +46,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/h
 
 ### Contribute
 
-Source code: [Link](github.com/hoopdead.github.io/portfolio/hackacthon/)
+Source code: [Link](https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/hackathon)
 
 ### License
 
@@ -56,7 +57,7 @@ This project is released under the MIT Licence. See the bundled LICENSE file for
 Mateusz Połeć
 
 
-===============================================================================
+
 
 # Veqer_portfolio - general information
 
@@ -83,7 +84,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/v
 
 ### Contribute
 
-Source code: [Link](github.com/hoopdead.github.io/portfolio/veqer_portfolio/)
+Source code: [Link](https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/veqer_portfolio)
 
 ### License
 
@@ -93,7 +94,7 @@ This project is released under the MIT Licence. See the bundled LICENSE file for
 
 Mateusz Połeć
 
-===============================================================================
+
 
 # Fishhub - general infromation
 
@@ -117,7 +118,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/f
 
 ### Contribute
 
-Source code: [Link](github.com/hoopdead.github.io/portfolio/fishhub/)
+Source code: [Link](https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/fishhub)
 
 ### License
 
@@ -127,7 +128,7 @@ This project is released under the MIT Licence. See the bundled LICENSE file for
 
 Mateusz Połeć
 
-===============================================================================
+
 
 
 # Clicker - general information
@@ -177,7 +178,7 @@ git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/C
 
 ### Contribute
 
-Source code: [Link](github.com/hoopdead.github.io/portfolio/Clicker/)
+Source code: [Link](https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/Clicker)
 
 ### License
 
