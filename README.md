@@ -6,7 +6,7 @@ Right now you can find here four project, and each with own story.
 
 Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
 
-===================================================================================
+===============================================================================
 
 # Hackathon - general information
 
@@ -17,14 +17,14 @@ Pages: hoopdead.github.io/portfolio/hackathon/
 
 List of files (html):
 
-index.html
-payment.html
-reservation.html
-training.html
-trenerzy.html
-ranking.html
-dojazd.html
-user.html
+- index.html
+- payment.html
+- reservation.html
+- training.html
+- trenerzy.html
+- ranking.html
+- dojazd.html
+- user.html
 
 During the creation process, we used pretty simple method:
 
@@ -37,28 +37,28 @@ Frameworks, that are inside project:
 
 https://fullcalendar.io/ - calendar, for list and dates of activites in building.
 
-#Hackathon - instalation
+### Hackathon - instalation
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
 git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/hackathon/
 
-#Contribute
+### Contribute
 
 Source code: github.com/hoopdead.github.io/portfolio/hackacthon/
 
-#License
+### License
 
 This project is released under the MIT Licence. See the bundled LICENSE file for details.
 
-#Authour
+### Authour
 
 Mateusz Połeć
 
 
-===================================================================================
+===============================================================================
 
-#Veqer_potfolio - general information
+# Hackathon - general information
 
 Second project, that came out from my hands - I just had to design website, without texts for a movie editor, that works for YouTubers.
 
@@ -66,7 +66,7 @@ Pages: hoopdead.github.io/portfolio/veqer_portfolio
 
 List of files (html):
 
-index.html
+- index.html
 
 Creation process, and work method (its pretty similar to Agile manifesto):
 
@@ -75,17 +75,17 @@ Designing everything.
 Programming.
 Testing, about bugs on devices.
 
-#Veqer_portfolio - instalation
+# Veqer_portfolio - instalation
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
 git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/veqer_portfolio/
 
-#Contribute
+# Contribute
 
 Source code: github.com/hoopdead.github.io/portfolio/veqer_portfolio/
 
-#License
+# License
 
 This project is released under the MIT Licence. See the bundled LICENSE file for details.
 
@@ -93,9 +93,9 @@ This project is released under the MIT Licence. See the bundled LICENSE file for
 
 Mateusz Połeć
 
-===================================================================================
+===============================================================================
 
-#Fishhub - general infromation
+# Fishhub - general infromation
 
 Third project - fishub, it's open-source code for everyone, that want to develop their own website about food, or advertise the restaurant. I made it for myself, to improve skills, get new experiecnes about dealing with problems.
 
@@ -109,27 +109,28 @@ Creation process, and work method:
 
 I didn't used any of working methods in this project - I just wanted to create something without planing anything before, just have fun with code, and do it in free time.
 
-#Fishhub - instalation
+### Fishhub - instalation
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
 git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/fishhub/
 
-#Contribute
+### Contribute
 
 Source code: github.com/hoopdead.github.io/portfolio/fishhub/
 
-#License
+### License
 
 This project is released under the MIT Licence. See the bundled LICENSE file for details.
 
-#Authour
+### Authour
 
 Mateusz Połeć
 
-===================================================================================
+===============================================================================
 
-#Clicker - general information
+
+# Clicker - general information
 
 Fourth project - that's project, that im currently working on. The main idea is to create a simple JavaScript game, without using any outside engine, just raw code. 
 Right now the game is still not finished, and I guess the whole process will take much time, before leaving workbench. Short description about game - you're a new president of area, that is absoulutely cut off from any society. You've to build a huge empire, using only clicking, and planing policy in menu.
@@ -144,44 +145,44 @@ Creation process, and work method:
 
 Agile manifesto - planing, designing, programming, testing.
 
-#Code review:
+### Code review:
 
-function cashClick(number) - its pretty simple, this function have to count how much money you will get, after clicking dollar icon in game, and then Beautify the text, to natural number. F.e: from "183389.16666666" to "183,389$"
+- function cashClick(number) - its pretty simple, this function have to count how much money you will get, after clicking dollar icon in game, and then Beautify the text, to natural number. F.e: from "183389.16666666" to "183,389$"
 
-function lemonBuy() - Function to buy a new lemon stand, first of all - check how much money player have, then add everything, beautify cash, count how much does player have to pay for next lemon stand, and jquery insert everything to HTML.
+- function lemonBuy() - Function to buy a new lemon stand, first of all - check how much money player have, then add everything, beautify cash, count how much does player have to pay for next lemon stand, and jquery insert everything to HTML.
 
-function carBuy() - same, like above.
+- function carBuy() - same, like above.
 
-function pizzaBuy() - same, like above.
+- function pizzaBuy() - same, like above.
 
-window.setInterval(function) - Add a small tax from every object, and save the game.
+- window.setInterval(function) - Add a small tax from every object, and save the game.
 
-function save() - insert values to localStorage.
+- function save() - insert values to localStorage.
 
-function load() - parse the values from local storages.
+- function load() - parse the values from local storages.
 
-function gameRestart() - set all values to default, and add special % to every object, so it's a lot easier to earn cash.
+- function gameRestart() - set all values to default, and add special % to every object, so it's a lot easier to earn cash.
 
-function darkMode() - is still in progress, but in fact it's changing theme to night mode - so colors are adjust to tired eyes.
+-function darkMode() - is still in progress, but in fact it's changing theme to night mode - so colors are adjust to tired eyes.
 
-function Beautify() - just a design thing, that makes numbers easier to read for player.
+- function Beautify() - just a design thing, that makes numbers easier to read for player.
 
-function with particles - it's also a design feature - the little particle comes from clicked dollar icon, to upper text form.
+- function with particles - it's also a design feature - the little particle comes from clicked dollar icon, to upper text form.
 
-#Clicker - instalation
+### Clicker - instalation
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
 git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/Clicker/
 
-#Contribute
+### Contribute
 
 Source code: github.com/hoopdead.github.io/portfolio/Clicker/
 
-#License
+### License
 
 This project is released under the MIT Licence. See the bundled LICENSE file for details.
 
-#Authour
+### Authour
 
 Mateusz Połeć
