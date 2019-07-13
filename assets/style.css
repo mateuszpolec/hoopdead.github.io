@@ -5,8 +5,8 @@ html
 
 
 body {
-    font-family: 'Hind', sans-serif !important;
-  }
+    font-family: 'Montserrat', sans-serif;
+}
 
 #center
 {
@@ -37,3 +37,11 @@ body {
 {
     font-size: 6px;
 }
+
+.anim-hover-first:hover
+{
+    opacity: 0.95;
+    font-size: 100px;
+    color: red;
+}
+
