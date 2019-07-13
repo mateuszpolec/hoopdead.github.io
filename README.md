@@ -1,16 +1,14 @@
-Hello there!
+### Hello there!
 
-Welcome on my profile!
+##### Welcome on my profile!
 
-Right now you can find here four project, and each with own story.
+##### Right now you can find here four project, and each with own story.
 
-My codewars badge: 
+##### And my own story:
 
-![alt text](https://www.codewars.com/users/HoopDead/badges/small)
+> Im a teenager from Poland, who wants to become a Backend, or Frontend programmer in near future. Right now I am 19 years old, and im just after highschool graduation, waiting > for October to start studying  Applied Computer Science on [Uniwersytet Wrocławski](https://uni.wroc.pl/) in Wrocław. 
 
-
-
-Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
+##### Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
 
 
 
@@ -48,7 +46,7 @@ https://fullcalendar.io/ - calendar, for list and dates of activites in building
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
-git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/hackathon/
+``` git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/hackathon/ ```
 
 ### Contribute
 
@@ -86,7 +84,7 @@ Testing, about bugs on devices.
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
-git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/veqer_portfolio/
+``` git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/veqer_portfolio/ ```
 
 ### Contribute
 
@@ -120,7 +118,7 @@ I didn't used any of working methods in this project - I just wanted to create s
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
-git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/fishhub/
+``` git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/fishhub/ ```
 
 ### Contribute
 
@@ -180,7 +178,7 @@ Agile manifesto - planing, designing, programming, testing.
 
 Open cmd, and using "cd" commands get into folder, that you want to keep project in, and then, use this command:
 
-git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/Clicker/
+``` git clone https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/Clicker/ ```
 
 ### Contribute
 
