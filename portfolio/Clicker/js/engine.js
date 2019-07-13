@@ -35,7 +35,7 @@ var highCostTax = 100;
 
 function cashClick(number)
 {
-	cash = 10000 + cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount); //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
+	cash = 10000 + cash + number + (0.01*lemonAmmount) + (0.5 * carAmmount) + lowCostTax + mediumCostTax + highCostTax; //Ile gracz bedzie dostawal pieniedzy przy jednym kliknieciu
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 	cashP = Beautify(cashP);
 	$('#cash').html(cashP);
@@ -153,6 +153,9 @@ function save()
 	localStorage.setItem('pizzaCost', JSON.stringify(pizzaCost));
 	localStorage.setItem('pizzaAmmount', JSON.stringify(pizzaAmmount));
 	localStorage.setItem('population', JSON.stringify(population));
+	localStorage.setItem('lowCostTax', JSON.stringify(lowCostTax));
+	localStorage.setItem('mediumCostTax', JSON.stringify(mediumCostTax));
+	localStorage.setItem('highCostTax', JSON.stringify(highCostTax));	
 	console.log(JSON.parse(localStorage.getItem('lemonaI')));
 	console.log(JSON.parse(localStorage.getItem('pizzaAmmount')));
 
@@ -173,6 +176,9 @@ function load()
 	pizzaCost = JSON.parse(localStorage.getItem('pizzaCost'));
 	pizzaAmmount = JSON.parse(localStorage.getItem('pizzaAmmount'));
 	population = JSON.parse(localStorage.getItem('population'));
+	lowCostTax = JSON.parse(localStorage.getItem('lowCostTax'));
+	mediumCostTax = JSON.parse(localStorage.getItem('mediumCostTax'));
+	highCostTax = JSON.parse(localStorage.getItem('highCostTax'));
 	cashP = cash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	carCostVisible = Beautify(carCost);
@@ -190,6 +196,9 @@ function load()
 	$('#pizzaCost').html(pizzaCostP);
 	$('#pizzaAmmount').html(pizzaAmmount);
 	$('#pizzaCash').html(pizzaCash);
+	$('#lowCostTax').html(lowCostTax);
+	$('#mediumCostTax').html(mediumCostTax);
+	$('#highCostTax').html(highCostTax);
 
 }
 
@@ -266,6 +275,57 @@ function showPanel()
 	$('#mediumCostTax').html(lowCostTax);
 	$('#highCostTax').html(lowCostTax);
 
+}
+
+function addlowTax()
+{
+	lowCostTax = lowCostTax + 5;
+	$('#lowCostTax').html(lowCostTax);
+}
+
+function removelowTax()
+{
+	lowCostTax = lowCostTax - 5;
+	$('#lowCostTax').html(lowCostTax);
+	if(lowCostTax < 0)
+	{
+		$('#lowCostTax').html("You can't do that!");
+		lowCostTax = 0;
+	}
+}
+
+function addmediumTax()
+{
+	mediumCostTax = mediumCostTax + 15;
+	$('#mediumCostTax').html(mediumCostTax);
+}
+
+function removemediumTax()
+{
+	mediumCostTax = mediumCostTax - 15;
+	$('#mediumCostTax').html(mediumCostTax);
+	if(mediumCostTax < 0)
+	{
+		$('#mediumCostTax').html("You can't do that!");
+		mediumCostTax = 0;
+	}
+}
+
+function addhighTax()
+{
+	highCostTax = highCostTax + 50;
+	$('#highCostTax').html(highCostTax);
+}
+
+function removehighTax()
+{
+	highCostTax = highCostTax - 50;
+	$('#highCostTax').html(highCostTax);
+	if(highCostTax < 0)
+	{
+		$('#highCostTax').html("You can't do that!");
+		highCostTax = 0;
+	}
 }
 
 

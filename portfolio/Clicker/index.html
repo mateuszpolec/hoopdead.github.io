@@ -129,9 +129,21 @@
 					<p id = "populationpersecond" class = "green"></p>
 					<hr>
 					<h4>Taxes in city: </h4>
-					<p>Taxes for low budget objects (L): <span id = "lowCostTax"></span>$</p>
-					<p>Taxes for medium budget objects (M): <span id = "mediumCostTax"></span>$</p>
-					<p>Taxes for high budget objects (H): <span id = "highCostTax"></span>$</p>
+					<p>Taxes for low budget objects (L): 
+						<span id = "lowCostTax"></span>$ 
+						<button type="button" onclick = "addlowTax()" class="ml-2 btn btn-light btn-sm"><i class="fas fa-plus"></i></button>
+						<button type="button" onclick = "removelowTax()" class="btn btn-light btn-sm"><i class="fas fa-minus"></i></button>
+					</p>
+					<p>Taxes for medium budget objects (M): 
+						<span id = "mediumCostTax"></span>$ 
+						<button type="button" onclick = "addmediumTax()" class="ml-2 btn btn-light btn-sm"><i class="fas fa-plus"></i></button>
+						<button type="button" onclick = "removemediumTax()" class="btn btn-light btn-sm"><i class="fas fa-minus"></i></button>
+					</p>
+					<p>Taxes for high budget objects (H): 
+						<span id = "highCostTax"></span>$ 
+						<button type="button" onclick = "addhighTax()" class="ml-2 btn btn-light btn-sm"><i class="fas fa-plus"></i></button>
+						<button type="button" onclick = "removemediumTax()" class="btn btn-light btn-sm"><i class="fas fa-minus"></i></button>
+					</p>
 				</div>
 				<div class="modal-footer">
 				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
