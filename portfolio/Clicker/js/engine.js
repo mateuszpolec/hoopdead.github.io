@@ -19,7 +19,13 @@ var officialAmmount = 0;
 
 var darkmode = 0; //zmienna darkmode - (0 - tryb dzienny, 1 - tryb nocny :) )
 
-var temp = 100;
+var temp = 0;
+
+var max_cash = 0;
+var population = 0;
+var lowCostTax = 5;
+var mediumCostTax = 25;
+var highCostTax = 100;
 
 
 
@@ -33,6 +39,10 @@ function cashClick(number)
 	cashP = cash.toFixed(1); //skracanie liczby do jednej po przecinku
 	cashP = Beautify(cashP);
 	$('#cash').html(cashP);
+	var cookieNumber = 10000 + number + (0.01*lemonAmmount) + (0.5 * carAmmount) + (2.5 * pizzaAmmount);
+	cookieNumber = Beautify(cookieNumber);
+	cookieNumber = cookieNumber + "$";
+	$('#cookieNumber').html(cookieNumber);
 };
 
 
@@ -107,7 +117,22 @@ window.setInterval(function(){
 	
 	cashClick((lemonAmmount*0.15) + (carAmmount * 10)); //ilosc pieniazkow na sekunde
 	save(); //wywolanie funkcji zapisujacej stan gry
+	if(cash > max_cash)
+	{
+		max_cash = cash;
+		population = population + (max_cash + lemonAmmount + carAmmount + pizzaAmmount) / 16384;
+		populationPerSecond = (max_cash + lemonAmmount + carAmmount + pizzaAmmount) / 16384;
+		var populationP = Beautify(population);
+		var populationPerSecondP = Beautify(populationPerSecond);
+		var populationPerSecondP = "+" + populationPerSecondP + " population inflow / second";
+		populationP = populationP + " human beings.";
+		$('#population').html(populationP);
+		$('#populationpersecond').html(populationPerSecondP);
+		$('#lowCostTax').html(lowCostTax);
+		$('#mediumCostTax').html(mediumCostTax);
+		$('#highCostTax').html(highCostTax);
 
+	}
 
 
 
@@ -127,6 +152,7 @@ function save()
 	localStorage.setItem('pizzaCash', JSON.stringify(pizzaCash));
 	localStorage.setItem('pizzaCost', JSON.stringify(pizzaCost));
 	localStorage.setItem('pizzaAmmount', JSON.stringify(pizzaAmmount));
+	localStorage.setItem('population', JSON.stringify(population));
 	console.log(JSON.parse(localStorage.getItem('lemonaI')));
 	console.log(JSON.parse(localStorage.getItem('pizzaAmmount')));
 
@@ -146,6 +172,7 @@ function load()
 	pizzaCash = JSON.parse(localStorage.getItem('pizzaCash'));
 	pizzaCost = JSON.parse(localStorage.getItem('pizzaCost'));
 	pizzaAmmount = JSON.parse(localStorage.getItem('pizzaAmmount'));
+	population = JSON.parse(localStorage.getItem('population'));
 	cashP = cash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	lemonCashP = lemonCash.toFixed(1); //skraca zapis liczby do jednego miejsca po przecinku
 	carCostVisible = Beautify(carCost);
@@ -230,6 +257,15 @@ function darkMode()
 		$('.navbar-light').css('background-color', '#ffffff');
 		$('#cookieNumber').css('color', '#000000');
 	}
+}
+
+function showPanel()
+{
+	$('#population').html(populationP);
+	$('#lowCostTax').html(lowCostTax);
+	$('#mediumCostTax').html(lowCostTax);
+	$('#highCostTax').html(lowCostTax);
+
 }
 
 

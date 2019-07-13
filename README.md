@@ -4,6 +4,11 @@ Welcome on my profile!
 
 Right now you can find here four project, and each with own story.
 
+My codewars badge: 
+
+[https://www.codewars.com/users/HoopDead/badges/small|alt=Codewars_badge]]
+
+
 Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
 
 
