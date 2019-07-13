@@ -4,11 +4,17 @@
 
 ##### Right now you can find here four project, and each with own story.
 
-##### And my own story:
+#####  My own story:
 
-> Im a teenager from Poland, who wants to become a Backend, or Frontend programmer in near future. Right now I am 19 years old, and im just after highschool graduation, waiting > for October to start studying  Applied Computer Science on [Uniwersytet Wrocławski](https://uni.wroc.pl/) in Wrocław. 
+> Im a teenager from Poland, who wants to become a Backend, or Frontend programmer in near future. Right now I am 19 years old, and im just after highschool graduation, waiting for October to start studying Applied Computer Science at [Uniwersytet Wrocławski](https://uni.wroc.pl/) in Wrocław. 
 
 ##### Languages used in projects (including frameworks): HTML, CSS, Javascript, jQuery, Bootstrap.
+
+##### You can also find me on:
+
+
+###### Codewars 
+[Link](https://www.codewars.com/users/HoopDead) & ![alt text](https://www.codewars.com/users/HoopDead/badges/small)
 
 
 
