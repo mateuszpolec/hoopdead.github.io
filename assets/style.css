@@ -1,0 +1,39 @@
+html
+{
+    overflow-y: hidden;
+}
+
+
+body {
+    font-family: 'Hind', sans-serif !important;
+  }
+
+#center
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+.para-huge
+{
+    font-size: 125px;
+    letter-spacing: 10px;
+    color: #d9d2d2;
+}
+
+.para-first
+{
+    font-size: 22px;
+    color: #666666;
+}
+
+.para-second
+{
+    font-size: 16px;
+    color: #666666;
+}
+
+.para-third
+{
+    font-size: 6px;
+}
