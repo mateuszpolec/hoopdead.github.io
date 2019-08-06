@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>High-rise Math</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
+    <script type = "text/javascript" src = "engine.js"></script>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div id = "nav">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5 justify-content-md-around">
+            <p class = "my-auto lead"><i class="fas fa-infinity mr-2"></i>High-rise Math</p>
+            <p class = "my-auto">High score board</p>
+      </nav>
+      <!--/.Navbar-->
+    </div>
+    <div id = "game" style = "display: none; background-color: #00BBFF; height: 33vh;">
+        <div class = "col-sm-12 text-center mt-5">
+            <h3 class = "mt-3">Your equation: </h3>
+            <div class = "col-sm-12 text-center">
+                <span id = "firstnumber"></span><span id = "operation" class = "ml-1"></span><span id = "secondnumber" class = "ml-1"></span>
+            </div>
+            <div class = "col-sm-4 mx-auto text-center mt-3">
+                <input type = "text" class = "form-control form-rounded" id = "userInput" onkeypress="is_pressed()"/>
+            </div>
+            <button type="button" class="btn btn-warning mt-4" onclick = "submit_answer()">Submit</button>
+        </div>
+    </div>
+        <div id = "demo" style = "background-color: #f7e6bc; height: 33vh">
+            <div class = "col-sm-12 mx-auto text-center my-auto">
+                <button id = "initgame" type="button" class="btn btn-info mx-auto mt-5" onclick = "create_math()">Init game</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

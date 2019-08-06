@@ -23,34 +23,63 @@
     <!--Background-->
     <script src="assets/three.r92.min.js"></script>
     <script src="assets/vanta.net.min.js"></script>
-
 </head>
 <body>
+        <script src = "assets/engine.js"></script>
     <!--Upper section-->
-    <div class = "col-sm-12 mx-auto text-center mt-3 animated fadeInDown">
-        <p class = 'para-first'>Mateusz Połeć</p>
-        <p class = 'para-second'>PL | EN</p>
-    </div>
+    <section id = "landing-page">
+        <div class = "col-sm-12 mx-auto text-center mt-3 animated fadeInDown">
+            <p class = 'para-first'>Mateusz Połeć</p>
+            <p class = 'para-second'>PL | EN</p>
+        </div>
 
-    <div class="col-sm-6 mx-auto alert alert-warning" role="alert">
+        <div class="col-sm-6 mx-auto alert alert-warning" role="alert">
             Page is still in build.
-          </div>
+        </div>
 
-    <div class = "col-sm-12 mx-auto text-center mt-5">
-        <p class = 'para-huge mt-2 animated fadeIn'><a class = "anim-hover-first">Projects</a></p>
-        <p class = 'para-huge mt-2 animated fadeIn delay-1s'><a class = "anim-hover-first">CV</a></p>
-        <p class = 'para-huge mt-2 animated fadeIn delay-2s'><a class = "anim-hover-first">About</a></p>
+        <div class = "col-sm-12 mx-auto text-center mt-5">
+            <p class = 'para-huge mt-3 animated fadeIn'><a class = "anim-hover-first" id = "target">Projects</a></p>
+            <p class = 'para-huge mt-3 animated fadeIn delay-1s'><a class = "anim-hover-first">CV</a></p>
+        </div>
+    </section>
 
-    </div>
-    <div id = "test">
-        <p>XD</p>
-    </div>
-    
+    <section id = "projects">
+        <div class = "row">
+            <p>Test</p>
+        </div>
+
+    </section>
+
+
     <script>
-            VANTA.NET({
+        VANTA.NET
+        ({
             el: "html",
-            color: 0x5b3aac
-            })
-            </script>
+            color: 0x5b3aac 
+        })
+    </script>
+    <script>
+        $(function() {
+        $(".anim-hover-first").hover(
+            function() {
+                $(this).css("color", "#4682B4");
+                $(this).css("font-size", "110px");
+            },function() {
+                $(this).css("color", "#dedede");
+                $(this).css("font-size", "125px");
+        });
+    });
+
+    $( "#target" ).click(function() {
+        $("#target" ).addClass( "animated zoomOut");
+        window.setTimeout(function(){
+            $("#target").css("display", "none");
+
+        }, 500 ); // 5 seconds
+
+    });
+
+    
+    </script>
 </body>
 </html>

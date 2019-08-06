@@ -1,6 +1,7 @@
 html
 {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -18,7 +19,7 @@ body {
 {
     font-size: 125px;
     letter-spacing: 10px;
-    color: #d9d2d2;
+    color: #dedede;
 }
 
 .para-first
@@ -36,12 +37,5 @@ body {
 .para-third
 {
     font-size: 6px;
-}
-
-.anim-hover-first:hover
-{
-    opacity: 0.95;
-    font-size: 100px;
-    color: red;
 }
 
