@@ -28,7 +28,7 @@
       </nav>
       <!--/.Navbar-->
     </div>
-    <div id = "game" style = "display: none; background-color: #00BBFF; height: 33vh;">
+    <div id = "game" style = "display: none; background-color: #00BBFF; height: 40vh;">
         <div class = "col-sm-12 text-center mt-5">
             <h3 class = "mt-3">Your equation: </h3>
             <div class = "col-sm-12 text-center">
@@ -40,10 +40,16 @@
             <button type="button" class="btn btn-warning mt-4" onclick = "submit_answer()">Submit</button>
         </div>
     </div>
-        <div id = "demo" style = "background-color: #f7e6bc; height: 33vh">
-            <div class = "col-sm-12 mx-auto text-center my-auto">
-                <button id = "initgame" type="button" class="btn btn-info mx-auto mt-5" onclick = "create_math()">Init game</button>
-            </div>
+    <div id = "demo" style = "background-color: #f7e6bc; height: 33vh;">
+        <div class = "col-sm-12 mx-auto text-center my-auto">
+            <button id = "initgame" type="button" class="btn btn-info mx-auto mt-5" onclick = "create_math()">Init game</button>
+        </div>
+    </div>
+    <div id = "final" style = "background-color: #00BBFF; height: 33vh; display: none;">
+        <div class = "col-sm-12 text-center mt-5">
+            <h2 class = "mt-3">Score: </h2>
+            <h2 id = "score"></h2>
+            <button type="button" class="btn btn-success mx-2" onclick = "reset()"><i class="fas fa-redo"></i></button><button type="button" class="btn btn-info mx-2">Save score</button>
         </div>
     </div>
 </body>
