@@ -93,6 +93,6 @@ function invocation() {
         $("#game").css("display", "none");
         $("#score").html(level * 60);
         $("#final").css("display", "flex");    
-    }, 5000);
+    }, 60000);
 }
 
