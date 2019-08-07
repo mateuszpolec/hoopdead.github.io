@@ -88,6 +88,7 @@ function json_getter()
         document.getElementById("history").innerHTML = myObj.mathematicians.mathematicians_array[temp].history;
         document.getElementById("header").innerHTML = myObj.improve.xxx.header;
         document.getElementById("description").innerHTML = myObj.improve.xxx.description;
+        var random = myObj.featured[Math.floor(Math.random() * myObj.featured.length)];
       }
     };
     xmlhttp.open("GET", "json.json", true);
