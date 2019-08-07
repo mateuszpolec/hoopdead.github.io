@@ -61,8 +61,8 @@
             document.getElementById("author").innerHTML = myObj.mathematicians.first.name;
             document.getElementById("famous_for").innerHTML = myObj.mathematicians.first.famous_for;
             document.getElementById("history").innerHTML = myObj.mathematicians.first.history;
-            document.getElementById("header").innerHTML = myObj.improve.first.header;
-            document.getElementById("description").innerHTML = myObj.improve.first.description;
+            document.getElementById("header").innerHTML = myObj.improve.xxx.header;
+            document.getElementById("description").innerHTML = myObj.improve.xxx.description;
           }
         };
         xmlhttp.open("GET", "json.json", true);
@@ -76,13 +76,10 @@
                     <p id = "history"></p>
                 </blockquote>
             </div>
-            <div class = "col-md-8 col-sm-12 ml-4 mt-5 text-justifty">
+            <div class = "col-md-7 col-sm-12 ml-4 mt-5 text-justifty">
                 <blockquote class="blockquote bq-success">
-                    <p class="bq-title">Success notification</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quibusdam dignissimos itaque harum illo!
-                    Quidem, corporis at quae tempore nisi impedit cupiditate perferendis nesciunt, ex dolores doloremque!
-                    Sit, rem, in?
-                    </p>
+                    <p class="bq-title" id = "header"></p>
+                    <p id = "description"></p>
                 </blockquote>
             </div>
         </div>
