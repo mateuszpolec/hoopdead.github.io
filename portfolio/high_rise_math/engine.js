@@ -84,6 +84,8 @@ function json_getter()
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         var random = myObj.featured[Math.floor(Math.random() * myObj.featured.length)];
+        var test = random.id;
+        console.log(test);
         console.log(random);
       }
     };
