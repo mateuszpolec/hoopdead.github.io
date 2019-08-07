@@ -19,7 +19,7 @@
     <script type = "text/javascript" src = "engine.js"></script>
     <link rel = "stylesheet" href = "style.css">
 </head>
-<body>
+<body onload = "json_getter()">
     <div id = "nav">
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5 justify-content-md-around">
@@ -53,30 +53,15 @@
         </div>
     </div>
     <div id = "content">
-    <script>
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            var myObj = JSON.parse(this.responseText);
-            document.getElementById("author").innerHTML = myObj.mathematicians.first.name;
-            document.getElementById("famous_for").innerHTML = myObj.mathematicians.first.famous_for;
-            document.getElementById("history").innerHTML = myObj.mathematicians.first.history;
-            document.getElementById("header").innerHTML = myObj.improve.xxx.header;
-            document.getElementById("description").innerHTML = myObj.improve.xxx.description;
-          }
-        };
-        xmlhttp.open("GET", "json.json", true);
-        xmlhttp.send();
-        </script>
         <div class = "row">
-            <div class = "col-md-5 col-sm-12 mx-auto ml-5 mt-5 my-auto text-justifty">
+            <div class = "col-md-5 col-sm-12 mx-auto ml-5 mt-5 text-justifty">
                 <blockquote class="blockquote bq-primary">
                     <p class="bq-title" id = "author"></p>  
                     <footer class="blockquote-footer mb-3"><cite title="Source Title" id = "famous_for"></cite></footer>
                     <p id = "history"></p>
                 </blockquote>
             </div>
-            <div class = "col-md-6 col-sm-12 mx-auto ml-5 mt-5 my-auto text-justifty">
+            <div class = "col-md-6 col-sm-12 mx-auto ml-5 mt-5 text-justifty">
                 <blockquote class="blockquote bq-success">
                     <p class="bq-title" id = "header"></p>
                     <p id = "description"></p>

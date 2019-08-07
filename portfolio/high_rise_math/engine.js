@@ -3,6 +3,8 @@ var operations = ["+", "-", "*"]
 var answer = 0;
 var timer = false;
 var initial;
+var mathematicians_array = ["first", "second", "third"];
+var improve_array = ["first", "second"];
 
 function create_math()
 {
@@ -72,6 +74,25 @@ function submit_answer()
             $("#game").css("background-color", "#00BBFF");
         }, 350);
     }
+}
+
+function json_getter()
+{
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        document.getElementById("author").innerHTML = myObj.mathematicians.first.name;
+        document.getElementById("famous_for").innerHTML = myObj.mathematicians.first.famous_for;
+        document.getElementById("history").innerHTML = myObj.mathematicians.first.history;
+        document.getElementById("header").innerHTML = myObj.improve.xxx.header;
+        document.getElementById("description").innerHTML = myObj.improve.xxx.description;
+      }
+    };
+    xmlhttp.open("GET", "json.json", true);
+    xmlhttp.send();
+    var temp = Math.floor((Math.random() * 3) + 0);
+    console.log(mathematicians_array[temp]);
 }
 
 function reset()
