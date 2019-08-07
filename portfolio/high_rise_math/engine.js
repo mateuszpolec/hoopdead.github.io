@@ -79,13 +79,15 @@ function submit_answer()
 function json_getter()
 {
     var xmlhttp = new XMLHttpRequest();
-    var temp = Math.floor((Math.random() * 3) + 0);
+    var temp = Math.floor((Math.random() * 32) + 0);
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         var random = myObj.featured[Math.floor(Math.random() * myObj.featured.length)];
-        var test = random.id;
-        console.log(test);
+        document.getElementById("author").innerHTML = random.name;
+        document.getElementById("famous_for").innerHTML = random.famous_for;
+        document.getElementById("history").innerHTML = random.history;
+
         console.log(random);
       }
     };
