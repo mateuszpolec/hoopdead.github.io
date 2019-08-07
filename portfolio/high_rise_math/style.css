@@ -1,6 +1,9 @@
 body
 {
     color: white;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #game
