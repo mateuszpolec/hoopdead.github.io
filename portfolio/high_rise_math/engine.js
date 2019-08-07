@@ -3,8 +3,6 @@ var operations = ["+", "-", "*"]
 var answer = 0;
 var timer = false;
 var initial;
-var mathematicians_array = ["first", "second", "third"];
-var improve_array = ["first", "second"];
 
 function create_math()
 {
@@ -87,13 +85,10 @@ function json_getter()
         document.getElementById("author").innerHTML = random.name;
         document.getElementById("famous_for").innerHTML = random.famous_for;
         document.getElementById("history").innerHTML = random.history;
-
-        console.log(random);
       }
     };
-    xmlhttp.open("GET", "json.json", true);
+    xmlhttp.open("GET", "mathematicians.json", true);
     xmlhttp.send();
-    console.log(mathematicians_array[temp]);
 }
 
 function reset()
