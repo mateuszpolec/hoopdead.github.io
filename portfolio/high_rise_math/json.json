@@ -1,5 +1,14 @@
 {
-    "name":"Albert Einstein",
-    "famous_for": "E = m*c^2",
-    "history": "Albert Einstein excelled in mathematics early in his childhood. He liked to study math on his own. He was once quoted as saying, “I never failed in mathematics…before I was fifteen I had mastered differential integral calculus.”"
-}
+    "mathematicians": {
+      "1": {
+        "name": "Albert Einstein",
+        "famous_for": "E = m*c^2",
+        "history": "Albert Einstein excelled in mathematics early in his childhood. He liked to study math on his own. He was once quoted as saying, “I never failed in mathematics…before I was fifteen I had mastered differential integral calculus.”"
+      },
+      "2": {
+        "name": "Isaac Newton",
+        "famous_for": "Mathematical Principles of Natural Philosophy",
+        "history": "The book of Sir Isaac Newton, Mathematical Principles of Natural Philosophy, became the catalyst to understanding mechanics. He is also the person credited for the development of the binomial theorem."
+      }
+    }
+  }
