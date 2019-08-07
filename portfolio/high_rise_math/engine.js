@@ -83,12 +83,8 @@ function json_getter()
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        document.getElementById("author").innerHTML = myObj.mathematicians.mathematicians_array[temp].name;
-        document.getElementById("famous_for").innerHTML = myObj.mathematicians.mathematicians_array[temp].famous_for;
-        document.getElementById("history").innerHTML = myObj.mathematicians.mathematicians_array[temp].history;
-        document.getElementById("header").innerHTML = myObj.improve.xxx.header;
-        document.getElementById("description").innerHTML = myObj.improve.xxx.description;
         var random = myObj.featured[Math.floor(Math.random() * myObj.featured.length)];
+        console.log(random);
       }
     };
     xmlhttp.open("GET", "json.json", true);
