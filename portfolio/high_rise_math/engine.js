@@ -72,7 +72,7 @@ function submit_answer()
         $("#game").css("background-color", "#8f0e0e");
         setTimeout(function() {
             $("#game").css("background-color", "#00BBFF");
-        }, 350);
+        }, 350);    
     }
 }
 
@@ -83,9 +83,9 @@ function json_getter()
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        document.getElementById("author").innerHTML = myObj.mathematicians.mathematicians[temp].name;
-        document.getElementById("famous_for").innerHTML = myObj.mathematicians.mathematicians[temp].famous_for;
-        document.getElementById("history").innerHTML = myObj.mathematicians.mathematicians[temp].history;
+        document.getElementById("author").innerHTML = myObj.mathematicians.mathematicians_array[temp].name;
+        document.getElementById("famous_for").innerHTML = myObj.mathematicians.mathematicians_array[temp].famous_for;
+        document.getElementById("history").innerHTML = myObj.mathematicians.mathematicians_array[temp].history;
         document.getElementById("header").innerHTML = myObj.improve.xxx.header;
         document.getElementById("description").innerHTML = myObj.improve.xxx.description;
       }
