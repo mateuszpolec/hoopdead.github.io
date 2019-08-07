@@ -40,12 +40,12 @@
             <button type="button" class="btn btn-warning mt-4" onclick = "submit_answer()">Submit</button>
         </div>
     </div>
-    <div id = "demo" style = "background-color: #f7e6bc; height: 33vh;">
+    <div id = "demo" style = "background-color: #f7e6bc; height: 40vh;">
         <div class = "col-sm-12 mx-auto text-center my-auto">
             <button id = "initgame" type="button" class="btn btn-info mx-auto mt-5" onclick = "create_math()">Init game</button>
         </div>
     </div>
-    <div id = "final" style = "background-color: #00BBFF; height: 33vh; display: none;">
+    <div id = "final" style = "background-color: #00BBFF; height: 40vh; display: none;">
         <div class = "col-sm-12 text-center mt-5">
             <h2 class = "mt-3">Score: </h2>
             <h2 id = "score"></h2>
@@ -61,19 +61,27 @@
             document.getElementById("author").innerHTML = myObj.mathematicians.first.name;
             document.getElementById("famous_for").innerHTML = myObj.mathematicians.first.famous_for;
             document.getElementById("history").innerHTML = myObj.mathematicians.first.history;
-
+            document.getElementById("header").innerHTML = myObj.improve.first.header;
+            document.getElementById("description").innerHTML = myObj.improve.first.description;
           }
         };
         xmlhttp.open("GET", "json.json", true);
         xmlhttp.send();
         </script>
-        <div class = "col-md-3 col-sm-12 ml-4 mt-5 text-justifty">
-            <blockquote class="blockquote bq-primary">
-                <p class="bq-title" id = "author"></p>  
-                <footer class="blockquote-footer mb-3"><cite title="Source Title" id = "famous_for"></cite></footer>
-                <p id = "history"></p>
-            </blockquote>
+        <div class = "row">
+            <div class = "col-md-3 col-sm-12 ml-4 mt-5 text-justifty">
+                <blockquote class="blockquote bq-primary">
+                    <p class="bq-title" id = "author"></p>  
+                    <footer class="blockquote-footer mb-3"><cite title="Source Title" id = "famous_for"></cite></footer>
+                    <p id = "history"></p>
+                </blockquote>
+            </div>
+            <div class = "col-md-8 col-sm-12 ml-4 mt-5 text-justifty">
+                <blackqoute class = "blackqoute bg-success">
+                    <p class = "bq-title" id = "header"></p>
+                    <p id = "description"></p>
+                </blackqoute>
+            </div>
         </div>
-    </div>
 </body>
 </html>
