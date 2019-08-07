@@ -21,3 +21,10 @@ body
     height: 5vh;
     text-align: center;
     }
+
+.page-footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
