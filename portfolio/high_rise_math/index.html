@@ -52,5 +52,17 @@
             <button type="button" class="btn btn-success mx-2" onclick = "reset()"><i class="fas fa-redo"></i></button><button type="button" class="btn btn-info mx-2">Save score</button>
         </div>
     </div>
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            var myObj = JSON.parse(this.responseText);
+            document.getElementById("demo").innerHTML = myObj.name;
+          }
+        };
+        xmlhttp.open("GET", "json.txt", true);
+        xmlhttp.send();
+        </script>
+        <p id = "demo"></p>
 </body>
 </html>

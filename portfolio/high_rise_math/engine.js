@@ -11,8 +11,8 @@ function create_math()
         timer = true;
         invocation();
     }
-    var first_number = Math.floor((Math.random() * level*2) + 1);
-    var second_number = Math.floor((Math.random() * level*2) + 1);
+    var first_number = Math.floor((Math.random() * 20) + 1);
+    var second_number = Math.floor((Math.random() * 20) + 1);
     var operation = Math.floor((Math.random() * 3) + 0);
     $("#firstnumber").html(first_number);
     $("#operation").html(operations[operation]);
