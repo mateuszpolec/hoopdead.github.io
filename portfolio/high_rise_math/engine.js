@@ -83,7 +83,7 @@ function json_getter()
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
-        var random = myObj.featured[Math.floor(Math.random() * myObj.featured.length)];
+        var random = myObj.mathematicians[Math.floor(Math.random() * myObj.mathematicians.length)];
         document.getElementById("author").innerHTML = random.name;
         document.getElementById("famous_for").innerHTML = random.famous_for;
         document.getElementById("history").innerHTML = random.history;
