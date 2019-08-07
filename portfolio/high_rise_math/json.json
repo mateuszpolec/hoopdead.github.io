@@ -9,6 +9,11 @@
         "name": "Isaac Newton",
         "famous_for": "Mathematical Principles of Natural Philosophy",
         "history": "The book of Sir Isaac Newton, Mathematical Principles of Natural Philosophy, became the catalyst to understanding mechanics. He is also the person credited for the development of the binomial theorem."
+      },
+      "third": {
+        "name": "Leonardo Pisano Bigollo",
+        "famous_for": "Fibonacci sequence",
+        "history": "Heralded as “the most talented western mathematician of the middle ages,” Leonardo Pisano Bigollo is better known as Fibonacci. He introduced the Arabic-Hindu number system to the western world. In his book, Liber Abaci (Book of Calculation), he included a sequence of numbers that are known today as “Fibonacci numbers.”"
       }
     }
   }

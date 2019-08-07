@@ -59,12 +59,23 @@
           if (this.readyState == 4 && this.status == 200) {
             var myObj = JSON.parse(this.responseText);
             document.getElementById("author").innerHTML = myObj.mathematicians.first.name;
+            document.getElementById("famous_for").innerHTML = myObj.mathematicians.first.famous_for;
+            document.getElementById("history").innerHTML = myObj.mathematicians.first.history;
+
           }
         };
         xmlhttp.open("GET", "json.json", true);
         xmlhttp.send();
         </script>
-        <p id = "author"></p>
+        <div class = "col-md-3 col-sm-12 ml-4 text-justifty">
+            <blockquote class="blockquote">
+                <p class="mb-0" id = "author"></p>
+                <footer class="blockquote-footer mb-3" id = "famous_for"></footer>
+            </blockquote>
+            <p class = "lead mt-1" id = "history"></p>
+
+
+        </div>
     </div>
 </body>
 </html>
