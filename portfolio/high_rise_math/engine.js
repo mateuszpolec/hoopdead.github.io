@@ -1,9 +1,38 @@
+//Variables - level, operations, answer, timer, intial, and countdown.
+//Level - function reset(), function invocation(), function() submit_answer().
+//Operations - function create_math().
+//answer - function result(), function submit_answer(), function reset().
+//timer - function create_math(), function reset();
+//intial - function reset(), function invocation().
+//countdown - function init_game(), function start_timer().
+
 var level = 1;
 var operations = ["+", "-", "*"]
 var answer = 0;
 var timer = false;
 var initial;
+var countdown = 60;
 
+
+//Start game function - docs (1).
+function init_game()
+{
+    countdown = 60;
+    $("#countdown").html(countdown);
+    create_math();
+}
+
+
+//Tick every 1000ms, and decrease countdown value - docs (2).
+function start_timer()
+{
+    x = setInterval(function(){ 
+        countdown--;
+        $("#countdown").html(countdown);
+    }, 1000);
+}
+
+//Prepare math equation, also check, if timer started yet - docs (3).
 function create_math()
 {
     if(!timer)
@@ -22,6 +51,8 @@ function create_math()
     result(first_number, operation, second_number);
 }
 
+
+//Solve equation and display it on site - docs (4).
 function result(first_number, operation, second_number)
 {
     if(operation == 0)
@@ -41,6 +72,7 @@ function result(first_number, operation, second_number)
     }
 }
 
+//Check, if enter button were pressed - docs (5).
 function is_pressed()
 {
     document.getElementById('userInput').onkeypress = function(e){
@@ -52,12 +84,13 @@ function is_pressed()
       }
 }
 
+//Chceck, has player correctly sovle math problem - docs (6).
 function submit_answer()
 {
     var input = document.getElementById("userInput").value;
-    level = level + 1;    
     if (input == answer)
     {
+        level = level + 1;    
         document.getElementById("userInput").value = ""; 
         create_math();
         $("#game").css("background-color", "#238c24");
@@ -74,8 +107,10 @@ function submit_answer()
     }
 }
 
+//Get data from json file, and start_timer - docs (7).
 function json_getter()
 {
+    start_timer();
     var xmlhttp = new XMLHttpRequest();
     var temp = Math.floor((Math.random() * 32) + 0);
     xmlhttp.onreadystatechange = function() {
@@ -91,6 +126,8 @@ function json_getter()
     xmlhttp.send();
 }
 
+
+//Start game again - reset all variables - docs (8).
 function reset()
 {
     level = 1;
@@ -98,18 +135,18 @@ function reset()
     points = 0;
     timer = false;
     $("#final").css("display", "none");
-    create_math();
+    init_game();
     clearTimeout( initial );
     invocation();
 }
 
-
+//Give player 60 seconds in game - docs (9).
 function invocation() {
     initial = window.setTimeout( 
     function() {
         $("#game").css("display", "none");
         $("#score").html(level * 60);
-        $("#final").css("display", "flex");    
+        $("#final").css("display", "flex");
     }, 60000);
 }
 

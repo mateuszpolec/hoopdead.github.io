@@ -45,11 +45,12 @@
                 <input type = "text" class = "form-control form-rounded" id = "userInput" onkeypress="is_pressed()"/>
             </div>
             <button type="button" class="btn btn-warning mt-4" onclick = "submit_answer()">Submit</button>
+            <p class = "mt-4 lead" id = "countdown">60</p>
         </div>
     </div>
     <div id = "demo" style = "background-color: #f7e6bc; height: 40vh;">
         <div class = "col-sm-12 mx-auto text-center my-auto">
-            <button id = "initgame" type="button" class="btn btn-info mx-auto" onclick = "create_math()">Init game</button>
+            <button id = "initgame" type="button" class="btn btn-info mx-auto" onclick = "init_game()">Init game</button>
         </div>
     </div>
     <div id = "final" style = "background-color: #00BBFF; height: 40vh; display: none;">
