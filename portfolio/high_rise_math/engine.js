@@ -20,6 +20,8 @@ function init_game()
     countdown = 60;
     $("#countdown").html(countdown);
     create_math();
+    $("#demo").css("display", "none");
+    $("#game").css("display", "flex");
 }
 
 
@@ -46,8 +48,6 @@ function create_math()
     $("#firstnumber").html(first_number);
     $("#operation").html(operations[operation]);
     $("#secondnumber").html(second_number);
-    $("#demo").css("display", "none");
-    $("#game").css("display", "flex");
     result(first_number, operation, second_number);
 }
 
@@ -58,17 +58,14 @@ function result(first_number, operation, second_number)
     if(operation == 0)
     {
         answer = first_number + second_number;
-        $("#answer").html(answer);
     }
     else if(operation == 1)
     {
         answer = first_number - second_number;
-        $("#answer").html(answer);
     }
     else if(operation == 2)
     {
         answer = first_number * second_number;
-        $("#answer").html(answer);
     }
 }
 
@@ -117,9 +114,9 @@ function json_getter()
       if (this.readyState == 4 && this.status == 200) {
         var myObj = JSON.parse(this.responseText);
         var random = myObj.mathematicians[Math.floor(Math.random() * myObj.mathematicians.length)];
-        document.getElementById("author").innerHTML = random.name;
-        document.getElementById("famous_for").innerHTML = random.famous_for;
-        document.getElementById("history").innerHTML = random.history;
+        $("#author").html(random.name);
+        $("#famous_for").html(random.famous_for);
+        $("#history").html(random.history);
       }
     };
     xmlhttp.open("GET", "mathematicians.json", true);
