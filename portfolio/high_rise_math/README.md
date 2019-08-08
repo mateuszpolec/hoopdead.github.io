@@ -21,7 +21,7 @@ List of files:
 - style.css
 
 Functions:
-```javascript 
-function init_game()
-```
-Test.
+- function init_game() - Is main function, that runs everything on site. First of all, function have to reset countdown to 60 seconds, and display it. Otherwise user will have bug with timer - for example, site would display timer value like -100. **Function runs function create_math()**
+
+- function start_timer() - tick every 1000ms, and decrement *variable countdown* and display it on site.
+

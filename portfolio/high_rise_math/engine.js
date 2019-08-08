@@ -26,7 +26,7 @@ function init_game()
 //Tick every 1000ms, and decrease countdown value - docs (2).
 function start_timer()
 {
-    x = setInterval(function(){ 
+    setInterval(function(){ 
         countdown--;
         $("#countdown").html(countdown);
     }, 1000);
