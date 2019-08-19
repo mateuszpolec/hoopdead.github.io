@@ -10,6 +10,7 @@
     <link rel = "stylesheet" href = "assets/style.css">
     <!--Icons & Fontawesome link-->
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!--Bootstrap-->
@@ -34,12 +35,12 @@
         </div>
 
         <div class="col-sm-6 mx-auto alert alert-warning" role="alert">
-            Page is still in build.
+            <i class="fas fa-exclamation-triangle mr-2"></i> Page is still in build.
         </div>
 
         <div class = "col-sm-12 mx-auto text-center mt-5">
             <p class = 'para-huge mt-3 animated fadeIn'><a class = "anim-hover-first" id = "target">Projects</a></p>
-            <p class = 'para-huge mt-3 animated fadeIn delay-1s'><a class = "anim-hover-first">CV</a></p>
+            <p class = 'para-huge mt-3 animated fadeIn delay-1s'><a class = "anim-hover-first" id = "cv">CV</a></p>
         </div>
     </section>
 
@@ -73,10 +74,22 @@
     $( "#target" ).click(function() {
         $("#target" ).addClass( "animated zoomOut");
         window.setTimeout(function(){
-            $("#target").css("display", "none");
-
+            $("#target").css("visibility", "hidden");
+            $("#cv").addClass("animated zoomOut")
         }, 500 ); // 5 seconds
+        window.setTimeout(function() {
+            $("#target").css("display", "none");
+            $("#cv").css("display", "none");
+            $("#projects").css("display", "flex");
+        }, 800);
 
+    });
+
+    $("#cv").click(function() {
+        $("#cv").addClass("animated zoomOut");
+        window.setTimeout(function() {
+            $("#cv").css("display", "none");
+        }, 500);
     });
 
     
