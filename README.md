@@ -197,3 +197,10 @@ This project is released under the MIT Licence. See the bundled LICENSE file for
 ### Authour
 
 Mateusz Połeć
+
+
+# High Rise Math
+
+> That's a web app build for a simple math equations - you have to solve as many as you can in 60 seconds.
+> Documentation with source code - [Link](https://github.com/HoopDead/hoopdead.github.io/tree/master/portfolio/high_rise_math)
+> Enjoy!

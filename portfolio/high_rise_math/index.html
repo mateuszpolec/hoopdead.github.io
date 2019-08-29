@@ -1,111 +1,156 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>High-rise Math</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Webpack Project</title>
+    <link rel="stylesheet" href="main.bundle.css" />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
     <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css"
+      rel="stylesheet"
+    />
     <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"></script>
-    <!--Engine core-->
-    <script type = "text/javascript" src = "engine.js"></script>
-    <!--CSS Core-->
-    <link rel = "stylesheet" href = "style.css">
-    <!-- Utf-8 include-->
-    <meta charset="UTF-8">
-    <!-- Favicon -->
-    <link rel="favicon" type="image/png" href="plus.png"/>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"
+    ></script>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-<body onload = "json_getter()">
-    <div id = "nav">
-        <!--Navbar-->
-        <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5 justify-content-md-around">
-            <p class = "my-auto lead"><i class="fas fa-infinity mr-2"></i>High-rise Math</p>
-            <p class = "my-auto">High score board</p>
-      </nav>
-      <!--/.Navbar-->
-    </div>
-    <div id = "game" style = "display: none; background-color: #00BBFF; height: 40vh;">
-        <div class = "col-sm-12 text-center mt-5">
-            <h3 class = "mt-3">Your equation: </h3>
-            <div class = "col-sm-12 text-center">
-                <span id = "firstnumber"></span><span id = "operation" class = "ml-1"></span><span id = "secondnumber" class = "ml-1"></span>
-            </div>
-            <div class = "col-sm-4 mx-auto text-center mt-3">
-                <input type = "text" class = "form-control form-rounded" id = "userInput" onkeypress="is_pressed()"/>
-            </div>
-            <button type="button" class="btn btn-warning mt-4" onclick = "submit_answer()">Submit</button>
-            <p class = "mt-4 lead" id = "countdown">60</p>
-        </div>
-    </div>
-    <div id = "demo" style = "background-color: #f7e6bc; height: 40vh;">
-        <div class = "col-sm-12 mx-auto text-center my-auto">
-            <button id = "initgame" type="button" class="btn btn-info mx-auto" onclick = "init_game()">Init game</button>
-        </div>
-    </div>
-    <div id = "final" style = "background-color: #00BBFF; height: 40vh; display: none;">
-        <div class = "col-sm-12 text-center mt-5">
-            <h2 class = "mt-3">Score: </h2>
-            <h2 id = "score"></h2>
-            <button type="button" class="btn btn-success mx-2" onclick = "reset()"><i class="fas fa-redo"></i></button><button type="button" class="btn btn-info mx-2">Save score</button>
-        </div>
-    </div>
-    <div id = "content">
-        <div class = "row">
-            <div class = "col-md-5 col-sm-12 mx-auto ml-5 mt-5 text-justifty">
-                <blockquote class="blockquote bq-primary mt-4">
-                    <p class="bq-title" id = "author"></p>  
-                    <footer class="blockquote-footer mb-3"><cite title="Source Title" id = "famous_for"></cite></footer>
-                    <p id = "history"></p>
-                </blockquote>
-            </div>
-            <div class = "col-md-6 col-sm-12 mx-auto ml-5 mt-5 text-justifty">
-                <blockquote class="blockquote bq-success mt-4">
-                    <p class="bq-title" id = "header">Make math part of your life.</p>
-                    <p id = "description">Incorporate math equations into your daily routine to help keep your skills sharp and to help you recognize the many ways that math exists all around you. <a href = "https://www.wikihow.com/Improve-Math-Skills"><em>Read more...</em></a></p>
-                </blockquote>
-            </div>
-        </div>
-        <!-- Footer -->
-<!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4">
+  <body>
+    <!--Navbar start-->
+    <nav class="navbar navbar-expand-lg navbar-light warning-color lighten-5">
+      <div class="row">
+        <i
+          class="fas fa-infinity ml-3 mx-3 my-auto"
+          style="font-size: 24px"
+        ></i>
+        <p class="text-center my-auto lead p-2">Quick Equations - Math Game</p>
+      </div>
+    </nav>
+    <!--Navbar stop-->
+    <!-- Game start-->
+    <div id="game" style="position: absolute">
+      <div
+        class="alert alert-warning mt-4 col-sm-12 col-md-10 mx-auto positioning"
+      >
+        <p class="my-auto">
+          <i class="fas fa-exclamation-triangle"></i> Hello there! You're now on
+          main website of Quick Equations game. Remember, that game is still in
+          build, and it may change in near future. It will be really pleased, if
+          you report bugs on my github -
+          <a href="https://github.com/hoopdead">here.</a>
+        </p>
+      </div>
+      <!-- Intro section start. -->
+      <div
+        class="col-sm-12 col-md-6 positioning text-center mx-auto"
+        id="intro"
+      >
+        <h2 class="mt-5 color-white">Shall we start?</h2>
+        <button type="button" class="btn btn-success mt-4" id="game-start">
+          Let's go!
+        </button>
+        <button type="button" class="btn btn-info mt-4" id="rules">
+          Show me rules first
+        </button>
 
-        <!-- Footer Elements -->
-        <div class="container">
-      
-          <!-- Social buttons -->
-          <ul class="list-unstyled list-inline text-center">
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1">
-                <i class="fab fa-facebook-f" style = "color: #4e71ba;"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-gplus mx-1">
-                <i class="fab fa-google-plus-g" style = "color: crimson;"> </i>
-              </a>
-            </li>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-li mx-1">
-                <i class="fab fa-linkedin-in" style = "color: #0077B5;"> </i>
-              </a>
-            </li>
-          </ul>
-          <!-- Social buttons -->
-      
+        <p class="mt-2">Click button above, or you'll never know.</p>
+        <p><em>Just don't lose your mind, and be patient.</em></p>
+      </div>
+      <!-- Intro section stop. -->
+      <!-- Rules section start-->
+      <div id="rules-section" class="col-md-9 mx-auto my-auto">
+        <span>
+          <p id="rules-content" class="text-center mt-3">
+            So... rules are pretty simple. You have to solve as many mathematic
+            equations as you can in specific time. At start you'll get
+            <b>15 seconds</b>. For corret solution, you'll get
+            <b style="color: #09d924;">+2</b> seconds to timer, and for wrong
+            solution <b style="color: crimson;">-2</b> seconds to timer. Of
+            course, <b>Enter button</b> is indicated to submit solutions. That's
+            all, good luck <b>&</b> have fun!<br /></p
+        ></span>
+
+        <button type="button" class="btn btn-danger mt-3" id="rules-back">
+          Ok, ok! Let me play!
+        </button>
+      </div>
+      <!-- Rules section stop -->
+      <!-- Game run start -->
+      <div id="game-run">
+        <div class="col-sm-12 col-md-10 text-center mx-auto">
+          <h2 class="mt-5 color-white" id="equation"></h2>
+          <input
+            type="text"
+            id="userInput"
+            maxlength="6"
+            class="input-rounded text-center"
+          />
+          <h5 id="countdown" class="color-white mt-3"></h5>
+          <p id="extratime"></p>
         </div>
-        <!-- Footer Elements -->
-      </footer>
-      <!-- Footer -->
-</body>
+      </div>
+      <div id="game-summary">
+        <div class="col-sm-12 col-md-6 mx-auto text-center">
+          <h4 class = "mt-2 color-white"><i class="fas fa-star mr-2"></i>Score: <span id = "score"></span></h4>
+          <hr>
+          <h4 class="mt-2 color-white">
+            <i class="fas fa-stopwatch mt-2"></i> Additional time:
+            <span id="total_extra_time"></span>
+            <hr />
+          </h4>
+          <h4 class="mt-2 color-white">
+            <i class="fas fa-stopwatch mt-2"></i> Negative time:
+            <span id="total_minus_time"></span>
+            <hr />
+          </h4>
+          <h4 class="mt-2 color-white">
+            <i class="fas fa-check"></i></i> Corret Answers:
+            <span id="correct_answer"></span>
+            <hr />
+          </h4>
+          <h4 class="mt-2 color-white">
+            <i class="fas fa-times"></i></i> Wrong Answers:
+            <span id="wrong_answer"></span>
+            <hr />
+          </h4>
+        </div>
+      </div>
+    </div>
+    <!-- Game stop -->
+
+    <script src="main.bundle.js"></script>
+  </body>
 </html>
