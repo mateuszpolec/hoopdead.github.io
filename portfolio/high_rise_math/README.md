@@ -2,4 +2,4 @@
 
 ## Moved this repo to
 
-[Link](github.com/hoopdead/math_game)
+[Link](https://github.com/hoopdead/math_game)
