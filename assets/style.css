@@ -98,9 +98,10 @@
   width: 100vw;
   height: 100vh;
   background: orange;
-  position: fixed;
+  position: absolute;
   display: none;
   z-index: 1;
+  background-size: cover;
 }
 
 hr {
