@@ -1,47 +1,193 @@
-html
-{
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
+/* Media section start */
 
+/* Big devices */
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-#center
-{
+@media (min-width: 769px) {
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  #content {
+    background: #32bfe6;
+    background-position: center center;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+  }
+
+  #logo {
+    font-size: 5rem;
+  }
+
+  .project-logo {
+    font-size: 5rem;
+  }
+
+  .project-content {
+    width: 80vw;
+    font-size: 2.5rem;
+  }
+  #projects {
+    margin-left: 5%;
+  }
+}
+/*Big devies stop */
+
+/* Small devices */
+
+@media (max-width: 768px) {
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  #content {
+    background: #32bfe6;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    color: white;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+  }
+
+  #logo {
+    font-size: 4rem;
+  }
+
+  .project-logo {
+    font-size: 3rem;
+  }
+
+  .project-content {
+    width: 80vw;
+    font-size: 1rem;
+  }
+}
+/* Small devices stop */
+/*Very small devices start */
+
+@media (max-width: 330px) {
+  #content {
+    overflow: hidden;
+    overflow-y: hidden;
+    background: #32bfe6;
+    background-position: center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    font-family: "Exo 2", sans-serif;
+  }
+
+  #logo {
+    font-size: 2.2rem;
+  }
 }
 
-.para-huge
-{
-    font-size: 110px;
-    letter-spacing: 10px;
-    color: #dedede;
+/* Very small devices stop */
+/*Media section stop */
+.box {
+  width: 100vw;
+  height: 100vh;
+  background: orange;
+  position: fixed;
+  display: none;
+  z-index: 1;
 }
 
-.para-first
-{
-    font-size: 22px;
-    color: #666666;
+hr {
+  width: 30vw;
+  color: white;
 }
 
-.para-second
-{
-    font-size: 16px;
-    color: #666666;
+#main {
+  position: absolute;
+  top: 20%;
+  color: white;
 }
 
-.para-third
-{
-    font-size: 6px;
+.move {
+  -webkit-animation: moveall 2s;
+  animation: moveall 2s;
 }
 
+.navbar {
+  position: absolute;
+}
 
-.para-text
-{
-    font-size: 12px;
-    color: #636363;
+@keyframes moveall {
+  0% {
+    width: 100vw;
+  }
+  100% {
+    width: 0vw;
+    opacity: 50%;
+  }
+}
+
+#boxes {
+  top: 35%;
+}
+
+#projects {
+  display: none;
+}
+
+#tab-1,
+#tab-2,
+#tab-3,
+#tab-4 {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+.project-box {
+  height: 192px;
+  width: 208px;
+  background: #1b87a8;
+}
+
+.icon-box {
+  margin-top: 35%;
+  font-size: 24px;
+}
+
+.project-icon {
+  font-size: 3rem;
+  color: #495057;
+}
+
+.project-link {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.html {
+  color: #d97511;
+}
+
+.bootstrap {
+  color: #a3189c;
+}
+
+.js {
+  color: #dde815;
+}
+
+.css {
+  color: #1589e8;
+}
+
+a {
+  color: white !important;
+  text-decoration: none;
 }

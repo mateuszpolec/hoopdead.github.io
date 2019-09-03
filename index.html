@@ -1,98 +1,258 @@
-<html>
-<head>
-    <!--Animation libary link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <!--Font link-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <!--UTF8 addnotation-->
-    <meta charset = "utf-8"/>
-    <!--Css link-->
-    <link rel = "stylesheet" href = "assets/style.css">
-    <!--Icons & Fontawesome link-->
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!--Jquery-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <!--Bootstrap-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> 
-    <!--Bootstrap MD-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/css/mdb.min.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.6/js/mdb.min.js"></script>
-    <title>Portfolio - Mateusz Połeć</title>
-    <!--Background-->
-    <script src="assets/three.r92.min.js"></script>
-    <script src="assets/vanta.net.min.js"></script>
-</head>
-<body>
-        <script src = "assets/engine.js"></script>
-    <!--Upper section-->
-    <section id = "landing-page">
-        <div class = "col-sm-12 mx-auto text-center mt-3 animated fadeInDown">
-            <p class = 'para-first'>Mateusz Połeć</p>
-            <p class = 'para-second'>PL | EN</p>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Portfolio | Mateusz Połeć</title>
+    <link rel="stylesheet" href="main.bundle.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/js/mdb.min.js"
+    ></script>
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Exo+2&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-        <div class="col-sm-6 mx-auto alert alert-warning" role="alert">
-            <i class="fas fa-exclamation-triangle mr-2"></i> Page is still in build.
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container">
+        <a class="navbar-brand text-dark" href="index.html">Portfolio</a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link text-dark js-scroll-trigger" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link text-dark js-scroll-trigger" href="#about"
+                >About me</a
+              >
+            </li>
+          </ul>
         </div>
-
-        <div class = "col-sm-12 mx-auto text-center mt-5">
-            <p class = 'para-huge mt-3 animated fadeIn'><a class = "anim-hover-first" id = "target">Projects</a></p>
-            <p class = 'para-huge mt-3 animated fadeIn delay-1s'><a class = "anim-hover-first" id = "cv">CV</a></p>
+      </div>
+    </nav>
+    <section id="content">
+      <div class="box move" id="scene"></div>
+      <div class="col-md-12 mx-auto text-center" id="main">
+        <h1 id="logo">
+          <b>Mateusz Połeć</b>
+          <hr />
+          <p class="lead">Front-end Developer</p>
+          <hr />
+        </h1>
+        <div class="col-md-12 mx-auto text-center mt-5" id="boxes">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a class="showproject show" id="test" data-tab="tab-1"
+                  ><div class="project-box w-30 mx-auto">
+                    <i class="fas fa-folder icon-box"></i>
+                    <div>Portfolio</div>
+                  </div></a
+                >
+              </div>
+              <div class="carousel-item">
+                <a class="showproject" data-tab="tab-2"
+                  ><div class="project-box w-30 mx-auto">
+                    <i class="fas fa-infinity icon-box"></i>
+                    <div>Math Game</div>
+                  </div></a
+                >
+              </div>
+              <div class="carousel-item">
+                <a class="showproject" data-tab="tab-3">
+                  <div class="project-box w-30 mx-auto">
+                    <i class="fas fa-fish icon-box"></i>
+                    <div>Fishhub</div>
+                  </div></a
+                >
+              </div>
+              <div class="carousel-item">
+                <a class="showproject" data-tab="tab-4"
+                  ><div class="project-box w-30 mx-auto">
+                    <i class="fas fa-project-diagram icon-box"></i>
+                    <div>Hackathon</div>
+                  </div></a
+                >
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only"></span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExampleControls"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <p class="mt-4">Take your sit and enjoy our ride.</p>
         </div>
+      </div>
+      <div id="projects">
+        <div id="tab-1">
+          <div class="col-sm-12 text-justify my-5">
+            <h1 class="project-logo">Portfolio</h1>
+            <p class="project-content mt-3" class="lead">
+              A small project created for a friend, during summertime. I had to
+              create raw version of product - just because my customer wanted to
+              use content on website and create texts on his own. Process of
+              creation went easily - one sprint in Agile manifesto, and
+              everything got finished.
+            </p>
+            <span
+              ><i class="fab fa-html5 project-icon my-4 html"></i
+              ><i class="fab fa-bootstrap project-icon my-3 ml-4 bootstrap"></i>
+              <i class="fab fa-js-square project-icon my-3 ml-4 js"></i>
+              <i class="fab fa-css3-alt project-icon my-3 ml-4 css"></i
+            ></span>
+            <p class="project-link mt-5">
+              <a href="https://hoopdead.github.io/veqer_portfolio/index.html"
+                >Show me his portfolio!</a
+              >
+            </p>
+          </div>
+        </div>
+        <div id="tab-2">
+          <div class="col-sm-12 text-justify my-5">
+            <h1 class="project-logo">Math Game</h1>
+            <p class="project-content mt-3" class="lead">
+              The game, created just for fun. Idea is pretty simple, to improve
+              your math skills - especially speed up your calculations. Rules
+              are simple - you have 15 seconds at start, to solve as many
+              equations as you can, then if your answer for equation is corret -
+              you'll get additional time, but if it is wrong, you'll get
+              punished.
+            </p>
+            <span
+              ><i class="fab fa-html5 project-icon my-4 html"></i
+              ><i class="fab fa-bootstrap project-icon my-3 ml-4 bootstrap"></i>
+              <i class="fab fa-js-square project-icon my-3 ml-4 js"></i>
+              <i class="fab fa-css3-alt project-icon my-3 ml-4 css"></i
+            ></span>
+            <p class="project-link mt-5">
+              <a href="https://hoopdead.github.io/math_game/index.html"
+                >Play!</a
+              >
+            </p>
+          </div>
+        </div>
+        <div id="tab-3">
+          <div class="col-sm-12 text-justify my-5">
+            <h1 class="project-logo">Fishhub</h1>
+            <p class="project-content mt-3" class="lead">
+              Website for sea food restaurat - nothing special, just builded
+              content with new icons, or learned new things, about overflow in
+              HTML, and things like that. Project is non-commercial, and under
+              MIT License, so everyone can use it for own purposes - commercial,
+              or just for learning.
+            </p>
+            <span
+              ><i class="fab fa-html5 project-icon my-4 html"></i
+              ><i class="fab fa-bootstrap project-icon my-3 ml-4 bootstrap"></i>
+              <i class="fab fa-js-square project-icon my-3 ml-4 js"></i>
+              <i class="fab fa-css3-alt project-icon my-3 ml-4 css"></i
+            ></span>
+            <p class="project-link mt-5">
+              <a href="https://hoopdead.github.io/fishhub/index.html"
+                >Let me eat it!</a
+              >
+            </p>
+          </div>
+        </div>
+        <div id="tab-4">
+          <div class="col-sm-12 text-justify my-5">
+            <h1 class="project-logo">Hackathon</h1>
+            <p class="project-content mt-3" class="lead">
+              I took a part in Hackathon conquest, where citiznes of my city had
+              to create a useful application for others in less than 48 hours.
+              That's how product - "Be Active!" were born. Be Active is a
+              website, for someone who want to join a fit life, or just start
+              training in sport objects in Wałbrzych.
+            </p>
+            <span
+              ><i class="fab fa-html5 project-icon my-4 html"></i
+              ><i class="fab fa-bootstrap project-icon my-3 ml-4 bootstrap"></i>
+              <i class="fab fa-js-square project-icon my-3 ml-4 js"></i>
+              <i class="fab fa-css3-alt project-icon my-3 ml-4 css"></i
+            ></span>
+            <p class="project-link mt-5">
+              <a href="https://hoopdead.github.io/hackathon/index.html"
+                >I want to Be Active!</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <section id = "projects">
-        <div class = "col-md-12 mx-auto text-center">
-            <h2>Hackathon</h2>
-            <p class = "lead para-text">Test</p>
-        </div>
-    </section>
-
-
-    <script>
-        VANTA.NET
-        ({
-            el: "html",
-            color: 0x5b3aac 
-        })
-    </script>
-    <script>
-        $(function() {
-        $(".anim-hover-first").hover(
-            function() {
-                $(this).css("color", "#4682B4");
-                $(this).css("font-size", "110px");
-            },function() {
-                $(this).css("color", "#dedede");
-                $(this).css("font-size", "125px");
-        });
-    });
-
-    $( "#target" ).click(function() {
-        $("#target" ).addClass( "animated zoomOut");
-        window.setTimeout(function(){
-            $("#target").css("visibility", "hidden");
-            $("#cv").addClass("animated zoomOut")
-        }, 500 ); // 5 seconds
-        window.setTimeout(function() {
-            $("#target").css("display", "none");
-            $("#cv").css("display", "none");
-            $("#projects").css("display", "flex");
-        }, 800);
-
-    });
-
-    $("#cv").click(function() {
-        $("#cv").addClass("animated zoomOut");
-        window.setTimeout(function() {
-            $("#cv").css("display", "none");
-        }, 500);
-    });
-
-    
-    </script>
-</body>
+    <script src="main.bundle.js"></script>
+  </body>
 </html>
