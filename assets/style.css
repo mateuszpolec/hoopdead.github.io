@@ -156,7 +156,7 @@ a {
 /* Box one start - used in changes between main site and projects */
 .box {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: orange;
   position: fixed;
   display: none;
@@ -166,7 +166,7 @@ a {
 /* Box two start - used in changes between main site an about */
 .box2 {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: #77a832;
   position: fixed;
   display: none;
