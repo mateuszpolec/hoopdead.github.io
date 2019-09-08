@@ -2,6 +2,7 @@ let tab_id = "tab";
 let about = false;
 
 $(".showproject").click(function() {
+  window.scrollTo(0, 0);
   $("#main").css("display", "none");
   $("#scene").css("display", "flex");
   $("#scene").css("z-index", "1");
@@ -18,7 +19,7 @@ $(".showabout").click(function() {
   if (about) {
     console.log("You are already here!");
   } else {
-    console.log("About is test");
+    window.scrollTo(0, 0);
     $("#scene2").css("display", "flex");
     $("#about").css("display", "flex");
     $("#content").css("display", "none");
