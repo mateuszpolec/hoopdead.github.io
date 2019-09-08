@@ -1,3 +1,10 @@
+/* Constant elements start */
+a {
+  color: white !important;
+  text-decoration: none;
+}
+/* Constant elements stop */
+
 /* Media section start */
 
 /* Big devices */
@@ -5,9 +12,8 @@
 @media (min-width: 769px) {
   html,
   body {
-    height: 100vh;
-    width: 100vw;
     overflow: hidden;
+    background: #32bfe6;
   }
   #content {
     background: #32bfe6;
@@ -22,6 +28,16 @@
 
   #logo {
     font-size: 5rem;
+  }
+
+  #boxes {
+    top: 35%;
+  }
+
+  .project-box {
+    height: 12rem;
+    width: 12rem;
+    background: #1b87a8;
   }
 
   .project-logo {
@@ -35,6 +51,23 @@
   #projects {
     margin-left: 5%;
   }
+
+  .about-container {
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+
+  .about-logo {
+    font-size: 4rem;
+  }
+
+  .about-content {
+    font-size: 2rem;
+  }
+
+  .about-icon {
+    font-size: 2rem;
+  }
 }
 /*Big devies stop */
 
@@ -43,8 +76,7 @@
 @media (max-width: 768px) {
   html,
   body {
-    height: 100vh;
-    width: 100vw;
+    background: #32bfe6;
     overflow-x: hidden;
   }
   #content {
@@ -52,7 +84,6 @@
     background-position: center center;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
     overflow-x: hidden;
     color: white;
     font-family: "Exo 2", sans-serif;
@@ -63,6 +94,16 @@
     font-size: 4rem;
   }
 
+  #boxes {
+    top: 45%;
+  }
+
+  .project-box {
+    height: 12rem;
+    width: 12rem;
+    background: #1b87a8;
+  }
+
   .project-logo {
     font-size: 3rem;
   }
@@ -70,6 +111,23 @@
   .project-content {
     width: 80vw;
     font-size: 1rem;
+  }
+
+  .about-container {
+    margin-left: 3%;
+    margin-top: 5%;
+  }
+
+  .about-logo {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    font-size: 1.5rem;
+  }
+
+  .about-icon {
+    font-size: 1.1rem;
   }
 }
 /* Small devices stop */
@@ -83,7 +141,6 @@
     background-position: center center;
     background-size: cover;
     width: 100vw;
-    height: 100vh;
     font-family: "Exo 2", sans-serif;
   }
 
@@ -94,37 +151,60 @@
 
 /* Very small devices stop */
 /*Media section stop */
+
+/* HTML boxes - connected with animation */
+/* Box one start - used in changes between main site and projects */
 .box {
   width: 100vw;
   height: 100vh;
   background: orange;
-  position: absolute;
+  position: fixed;
   display: none;
   z-index: 1;
-  background-size: cover;
 }
+/* Box one stop */
+/* Box two start - used in changes between main site an about */
+.box2 {
+  width: 100vw;
+  height: 100vh;
+  background: #77a832;
+  position: fixed;
+  display: none;
+  z-index: 1;
+}
+/* Box two stop */
+/* HTML Boxes - stop */
 
+/* Line, that separates specific content */
 hr {
   width: 30vw;
   color: white;
 }
+/* Line stop */
 
+/* Navbar position */
+.navbar {
+  position: absolute;
+}
+/* Navbar stop */
+
+/* Main section start */
 #main {
   position: absolute;
   top: 20%;
   color: white;
 }
+/* Main stop */
 
-.move {
-  -webkit-animation: moveall 2s;
-  animation: moveall 2s;
+/*Animation start */
+
+/* First animation - used in changes between main content and projects */
+.move-box {
+  -webkit-animation: move-box 2s;
+  animation: move-box 2s;
 }
 
-.navbar {
-  position: absolute;
-}
-
-@keyframes moveall {
+@keyframes move-box {
   0% {
     width: 100vw;
   }
@@ -134,10 +214,30 @@ hr {
   }
 }
 
-#boxes {
-  top: 35%;
+/* First animation stop */
+
+/* Second animation - used in changes between main content and about */
+
+.move-about {
+  -webkit-animation: move-about 2s;
+  animation: move-about 2s;
 }
 
+@keyframes move-about {
+  0% {
+    right: 0%;
+  }
+  100% {
+    right: 100%;
+    opacity: 50%;
+  }
+}
+
+/* Second animation stop */
+
+/* Animation stop */
+
+/* Project section start */
 #projects {
   display: none;
 }
@@ -148,13 +248,6 @@ hr {
 #tab-4 {
   display: none;
   width: 100vw;
-  height: 100vh;
-}
-
-.project-box {
-  height: 192px;
-  width: 208px;
-  background: #1b87a8;
 }
 
 .icon-box {
@@ -172,6 +265,7 @@ hr {
   font-size: 3rem;
 }
 
+/* Project and About icons */
 .html {
   color: #d97511;
 }
@@ -188,7 +282,19 @@ hr {
   color: #1589e8;
 }
 
-a {
-  color: white !important;
-  text-decoration: none;
+/* Icons stop */
+
+/*Project stop */
+
+/* About section start */
+#about {
+  display: none;
+  background: #32bfe6;
+  background-position: center center;
+  background-size: cover;
+  width: 100vw;
+  overflow: hidden;
+  color: white;
+  font-family: "Exo 2", sans-serif;
 }
+/* About section stop */
