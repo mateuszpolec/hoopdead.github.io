@@ -1,0 +1,74 @@
+/* RESPONSIVE SECTION */
+
+$small-device-width: 0px;
+$large-device-width: 992px;
+
+@mixin small_device {
+  @media (min-width: #{$small-device-width}) and (max-width: #{$large-device-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large_device {
+  @media (min-width: #{$large-device-width}) {
+    @content;
+  }
+}
+
+/* NAVBAR SECTION */
+
+.navbar {
+  position: absolute;
+}
+
+/* HOME SECTION */
+
+#landing-page-section {
+  background: url("../assets/images/landing-background.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.landing-page-name-title {
+    font-size: 16px;
+    background: -webkit-radial-gradient(#ffffff, rgb(30, 108, 191));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include small_device() {
+        font-size: 32px !important;
+    }
+    @include large-device {
+        font-size: 48px !important;
+    }
+}
+
+.landing-page-hr {
+  background-color: #fff;
+}
+
+.landing-page-text {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* INTRODUCTION SECTION */
+
+.introduction-title {
+  font-size: 16px;
+  @include small_device() {
+    font-size: 24px;
+  }
+  @include large_device() {
+    font-size: 28px;
+  }
+}
+
+.introduction-description {
+  font-size: 13px;
+  @include small_device() {
+    font-size: 16px;
+  }
+  @include large_device() {
+    font-size: 17px;
+  }
+}
