@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "./styles/style.scss";
 import LandingPage from "./components/landing_page";
-import IntroductionSection from "./components/introduction";
 import Navbar from "./components/navbar";
-import logo from "./logo.png";
+import SectionGradient from "./components/section-gradient";
 
 class App extends Component {
   render() {
@@ -11,7 +10,7 @@ class App extends Component {
       <div>
         <Navbar></Navbar>
         <LandingPage></LandingPage>
-        <IntroductionSection></IntroductionSection>
+        <SectionGradient></SectionGradient>
       </div>
     );
   }

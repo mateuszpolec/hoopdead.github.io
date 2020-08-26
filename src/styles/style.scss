@@ -15,10 +15,24 @@ $large-device-width: 992px;
   }
 }
 
+
+.background-gradient {
+  background: linear-gradient(181.35deg, #000000 1.15%, #333333 100.08%, rgba(34, 34, 34, 0.85) 146.92%, rgba(0, 0, 0, 0.53) 156.74%, rgba(0, 0, 0, 0.53) 156.74%);
+}
+
 /* NAVBAR SECTION */
 
-.navbar {
+.navbar-absolute {
   position: absolute;
+  color: #fafafa;
+  width: 100%;
+  font-weight: 600;
+}
+
+.navbar-text-right {
+  position: absolute;
+  display: flex;
+  width: 100%;
 }
 
 /* HOME SECTION */
@@ -54,21 +68,27 @@ $large-device-width: 992px;
 /* INTRODUCTION SECTION */
 
 .introduction-title {
-  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  color: #2294E0;
   @include small_device() {
     font-size: 24px;
   }
   @include large_device() {
-    font-size: 28px;
+    font-size: 48px;
+    line-height: 56px;
   }
 }
 
 .introduction-description {
-  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  color: #777777;
   @include small_device() {
     font-size: 16px;
   }
   @include large_device() {
-    font-size: 17px;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
