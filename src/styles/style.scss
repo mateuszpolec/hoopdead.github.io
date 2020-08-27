@@ -92,3 +92,92 @@ $large-device-width: 992px;
     line-height: 32px;
   }
 }
+
+/* ICONS SECTION */
+
+.icons-description {
+  font-style: normal;
+  font-weight: 300;
+  color: #777777;
+  @include large_device() {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+/* PROJECTS SECTION */
+
+.projects-title {
+  font-style: normal;
+  font-weight: 300;
+  color: #2294E0;
+  @include large_device() {
+    font-size: 48px;
+  }
+}
+
+.projects-card {
+  background: #242424;
+  @include large_device() {
+    padding: 10% 5%;
+  }
+}
+
+.projects-card-icon {
+  color: #5A5A5A;
+}
+
+.projects-card-title {
+  font-style: normal;
+  font-weight: normal;
+  color: #2294E0;
+  @include large_device() {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.projects-card-description {
+  font-style: normal;
+  font-weight: 300;
+  color: #888888;
+  @include large_device() {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.projects-html5 {
+  color: #E07222;
+}
+
+.projects-css3 {
+  color: #059BFF;
+}
+
+.projects-js {
+  color: #F1B51B;
+}
+
+.projects-bootstrap {
+  color: #563D7C;
+}
+
+.projects-react {
+  color: #61DBFB;
+}
+
+.projects-icon {
+  font-size: 24px;
+}
+
+/* CONTACT SECTION */
+
+.contact-title {
+  font-style: normal;
+  font-weight: 300;
+  color: #2294E0;
+  @include large_device() {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,33 @@
+import React, { Component } from "react";
+import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import LaptopIcon from "../assets/images/laptop.png";
+import AwardIcon from "../assets/images/award.png";
+import PaletteIcon from "../assets/images/palette.png";
+import ProfitIcon from "../assets/images/profit.png";
+
+class IconsSection extends Component {
+    render() {
+        return (
+            <MDBRow className = "py-5">
+                <MDBCol md = "3" className = "text-center">
+                    <img src = {LaptopIcon}></img>
+                    <p className = "icons-description mt-4 w-75 mx-auto">I am up-to-date with newest technologies and always trying to improve my programming skills.</p>
+                </MDBCol>
+                <MDBCol md = "3" className = "text-center">
+                    <img src = {AwardIcon}></img>
+                    <p className = "icons-description mt-4 w-75 mx-auto">I took a part in couple of programming conquests and hackathons. </p>
+                </MDBCol>
+                <MDBCol md = "3" className = "text-center">
+                    <img src = {PaletteIcon}></img>
+                    <p className = "icons-description mt-4 w-75 mx-auto">I know the basics of User Experience and User Interface design.</p>
+                </MDBCol>
+                <MDBCol md = "3" className = "text-center">
+                    <img src = {ProfitIcon}></img>
+                    <p className = "icons-description mt-4 w-75 mx-auto">You are going to get excellent employee!<MDBIcon className = "mx-2" icon = "heart"></MDBIcon></p>
+                </MDBCol>
+            </MDBRow>
+        )
+    }
+}
+
+export default IconsSection;
