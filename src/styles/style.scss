@@ -23,16 +23,20 @@ $large-device-width: 992px;
 /* NAVBAR SECTION */
 
 .navbar-absolute {
-  position: absolute;
-  color: #fafafa;
-  width: 100%;
-  font-weight: 600;
+  @include large_device() {
+    position: absolute;
+    color: #fafafa;
+    width: 100%;
+    font-weight: 600;
+  }
 }
 
 .navbar-text-right {
-  position: absolute;
-  display: flex;
-  width: 100%;
+  @include large_device() {
+    position: absolute;
+    display: flex;
+    width: 100%;
+  }
 }
 
 /* HOME SECTION */
@@ -72,7 +76,7 @@ $large-device-width: 992px;
   font-weight: 300;
   color: #2294E0;
   @include small_device() {
-    font-size: 24px;
+    font-size: 32px;
   }
   @include large_device() {
     font-size: 48px;
@@ -85,7 +89,7 @@ $large-device-width: 992px;
   font-weight: 300;
   color: #777777;
   @include small_device() {
-    font-size: 16px;
+    font-size: 18px;
   }
   @include large_device() {
     font-size: 24px;
@@ -99,6 +103,9 @@ $large-device-width: 992px;
   font-style: normal;
   font-weight: 300;
   color: #777777;
+  @include small_device() {
+    font-size: 18px;
+  }
   @include large_device() {
     font-size: 24px;
     line-height: 28px;
@@ -111,6 +118,9 @@ $large-device-width: 992px;
   font-style: normal;
   font-weight: 300;
   color: #2294E0;
+  @include small_device() {
+    font-size: 32px;
+  }
   @include large_device() {
     font-size: 48px;
   }
@@ -131,6 +141,9 @@ $large-device-width: 992px;
   font-style: normal;
   font-weight: normal;
   color: #2294E0;
+  @include small_device() {
+    font-size: 20px;
+  }
   @include large_device() {
     font-size: 24px;
     line-height: 28px;
@@ -177,7 +190,236 @@ $large-device-width: 992px;
   font-style: normal;
   font-weight: 300;
   color: #2294E0;
+  @include small_device() {
+    font-size: 32px;
+  }
   @include large_device() {
     font-size: 48px;
   }
 }
+
+.field {
+  width: 100%;
+  height: 56px;
+  border-radius: 4px;
+  position: relative;
+  background-color: #222222;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+  border-bottom: 1px solid #888888;
+}
+
+.field:hover {
+  background-color: #444444;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.field.active {
+  background-color: #222222;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.field.active input {
+  padding: 24px 16px 8px 16px;
+}
+
+.field.active input + label {
+  top: 4px;
+  opacity: 1;
+  color: #666666;
+}
+
+.field.locked {
+  pointer-events: none;
+}
+
+.field input {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  padding: 0px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  color: rgb(199, 199, 199);
+  outline: none;
+  box-shadow: 0px 4px 20px 0px transparent;
+  transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+    0.1s padding ease-in-out;
+  -webkit-appearance: none;
+}
+
+.field input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+.field input:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.field input + label {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.1s all ease-in-out;
+}
+
+.field input + label.error {
+  color: #ec392f;
+}
+
+.field p.predicted {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #e0e0e0;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.contact-field-message-title {
+  color: #888888;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.field-message {
+  width: 100%;
+  color: rgb(199, 199, 199);
+  background-color: #222222;
+  border: none;
+  border-bottom: 1px solid #888888;
+  outline: none;
+}
+
+.field-message:focus {
+  border-bottom: 1px solid #888888;
+  color: rgb(199, 199, 199);
+}
+
+.contact-button {
+  background-color: #2294E0 !important;
+  @include large_device() {
+    width: 20%;
+  }
+  // width: 20%;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #999999;
+}
+
+// .field {
+//   width: 100%;
+//   height: 56px;
+//   border-radius: 4px;
+//   position: relative;
+//   background-color: #222222;
+//   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+// }
+
+// .field:hover {
+//   background-color: #444444;
+//   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+// }
+
+// .field.active {
+//   background-color: #333333;
+//   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+// }
+
+// .field.active input {
+//   padding: 24px 16px 8px 16px;
+// }
+
+// .field.active input + label {
+//   top: 4px;
+//   opacity: 1;
+//   color: #999999;
+// }
+
+// .field.locked {
+//   pointer-events: none;
+// }
+
+// .field input {
+//   width: 100%;
+//   height: 56px;
+//   position: relative;
+//   padding: 0px 16px;
+//   border: none;
+//   border-radius: 4px;
+//   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+//   font-size: 16px;
+//   font-weight: 400;
+//   line-height: normal;
+//   background-color: transparent;
+//   color: #999999;
+//   outline: none;
+//   box-shadow: 0px 4px 20px 0px transparent;
+//   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out,
+//     0.1s padding ease-in-out;
+//   -webkit-appearance: none;
+// }
+
+// .field input::-webkit-input-placeholder {
+//   color: rgba(255, 255, 255, 0.8);
+// }
+// .field input::-moz-placeholder {
+//   color: rgba(255, 255, 255, 0.8);
+// }
+// .field input:-ms-input-placeholder {
+//   color: rgba(255, 255, 255, 0.8);
+// }
+// .field input:-moz-placeholder {
+//   color: rgba(255, 255, 255, 0.8);
+// }
+
+// .field input + label {
+//   position: absolute;
+//   top: 24px;
+//   left: 16px;
+//   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+//   font-size: 12px;
+//   font-weight: 600;
+//   line-height: 24px;
+//   color: #333333;
+//   opacity: 0;
+//   pointer-events: none;
+//   transition: 0.1s all ease-in-out;
+// }
+
+// .field input + label.error {
+//   color: #ec392f;
+// }
+
+// .field p.predicted {
+//   position: absolute;
+//   top: 8px;
+//   left: 16px;
+//   // font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
+//   font-size: 16px;
+//   font-weight: 400;
+//   line-height: 24px;
+//   color: #e0e0e0;
+//   opacity: 1;
+//   pointer-events: none;
+// }

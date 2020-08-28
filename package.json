@@ -21,6 +21,7 @@
     "remove-demo": "rimraf ./src/assets ./src/components ./src/pages ./src/Routes.js ./src/App.js ./src/index.css && npm run rename"
   },
   "devDependencies": {
+    "react-motion": "^0.5.2",
     "renamer": "^1.0.0",
     "rimraf": "^2.6.2"
   },

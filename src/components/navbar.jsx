@@ -8,7 +8,7 @@ class Navbar extends Component {
             //     <p className = "navbar-text-left mt-5 ml-5"><a className = "mx-3">HOME</a><a className = "mx-3">INTRODUCTION</a> <a className = "mx-3">PROJECTS</a> <a className = "mx-3">CONTACT</a></p>
             //     <p className = "navbar-text-right text-right">asd</p>
             // </div>
-            <div>
+            <div className = "d-none d-lg-flex">
             <div className = "navbar-absolute">
                 <p className = "text-left mt-5 ml-5"><a className = "mx-3">HOME</a><a className = "mx-3">INTRODUCTION</a> <a className = "mx-3">PROJECTS</a> <a className = "mx-3">CONTACT</a></p>
             </div>

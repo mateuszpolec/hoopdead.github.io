@@ -11,6 +11,7 @@ class App extends Component {
         <Navbar></Navbar>
         <LandingPage></LandingPage>
         <SectionGradient></SectionGradient>
+        {/* <Footer></Footer> */}
       </div>
     );
   }
