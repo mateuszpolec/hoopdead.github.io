@@ -1,4 +1,0 @@
-2020.08.26 15:10:16 INFO  started: Metals version 0.9.3 in workspace '/mnt/d/Programs/Projekty/github/hoopdead.github.io' for client vscode.
-2020.08.26 15:10:18 INFO  time: initialize in 1.74s
-2020.08.26 15:10:19 WARN  no build tool detected in workspace '/mnt/d/Programs/Projekty/github/hoopdead.github.io'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
-2020.08.26 19:29:32 INFO  shutting down Metals
