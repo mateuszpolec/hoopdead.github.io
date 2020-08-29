@@ -5,7 +5,7 @@ import Input from "./Input";
 class ContactSection extends Component {
     render() {
         return (
-            <MDBRow class = "mt-5" id = "register-input">
+            <MDBRow class = "mt-5" id = "contact-section">
                 <MDBCol sm = "12" className = "text-center py-5 py-lg-4">
                     <p className = "contact-title">Contact with me</p>
                 </MDBCol>

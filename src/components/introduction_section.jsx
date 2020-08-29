@@ -5,7 +5,7 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 class IntroductionSection extends Component {
     render() {
         return (
-                <MDBRow>
+                <MDBRow id = "introduction-section">
                     <MDBCol sm = "12" lg = "8" className = "text-center mx-auto py-5">
                         <p className = "introduction-title mt-5 py-3 py-lg-5">Hi! My name is Mateusz 👋</p>
                         <p className = "introduction-description">There is never too late or too early to take a step in new field. Key for everything is just our involvement which I have already demonstrated when I was 15 years old. it was the first time when I came into contact with programming.
