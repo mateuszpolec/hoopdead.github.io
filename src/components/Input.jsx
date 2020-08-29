@@ -1,5 +1,4 @@
 import React from "react";
-import { TransitionMotion, spring } from "react-motion";
 import "../styles/style.scss";
 
 class Input extends React.Component {
@@ -8,6 +7,8 @@ class Input extends React.Component {
   
       this.state = {
         active: (props.locked && props.active) || false,
+        id: props.id || "",
+        name: props.name || "",
         value: props.value || "",
         error: props.error || "",
         label: props.label || "Label"
@@ -27,7 +28,7 @@ class Input extends React.Component {
 
   
     render() {
-      const { active, value, error, label } = this.state;
+      const { active, id, name, value, error, label } = this.state;
       const { predicted, locked } = this.props;
       const fieldClassName = `field ${(locked ? active : active || value) &&
         "active"} ${locked && !active && "locked"}`;
@@ -39,7 +40,8 @@ class Input extends React.Component {
             predicted &&
             predicted.includes(value) && <p className="predicted">{predicted}</p>}
           <input
-            id={1}
+            id={id}
+            name = {name}
             type="text"
             value={value}
             placeholder={label}

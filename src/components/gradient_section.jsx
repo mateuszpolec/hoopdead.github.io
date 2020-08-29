@@ -9,7 +9,7 @@ import ContactSection from "./contact_section";
 class SectionGradient extends Component {
     render() {
         return (
-            <MDBContainer fluid className = "min-vh-100" className = "background-gradient">
+            <MDBContainer fluid className = "min-vh-100 background-gradient">
                 <IntroductionSection></IntroductionSection>
                 <IconsSection></IconsSection>
                 <ProjectsSection></ProjectsSection>

@@ -4,6 +4,8 @@
   "private": true,
   "// If You want to install mdbreact from our GitLab repository, please replace '4.27.0' with gitURL provided here ->": "git+https://oauth2:<YOUR-TOKEN-GOES-HERE>@git.mdbootstrap.com/mdb/react/re-pro.git",
   "dependencies": {
+    "email-js": "^2.0.2",
+    "emailjs-com": "^2.6.3",
     "mdbreact": "4.27.0",
     "node-sass": "^4.14.1",
     "particles-bg": "^2.5.0",

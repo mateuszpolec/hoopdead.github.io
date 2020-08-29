@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 import "../styles/style.scss";
-import Navbar from "./navbar";
 
 class LandingPage extends Component {
     render() {
